@@ -13,8 +13,8 @@ const Services = lazy(() => import("./pages/Services"));
 const Products = lazy(() => import("./pages/Products"));
 const Career = lazy(() => import("./pages/Career"));
 const Contact = lazy(() => import("./pages/Contact"));
-const Login = lazy(() => import("./pages/Login"));
-const Register = lazy(() => import("./pages/Register"));
+// const Login = lazy(() => import("./pages/Login"));
+// const Register = lazy(() => import("./pages/Register"));
 
 function App() {
 
@@ -28,10 +28,10 @@ function App() {
     >
       <Routes>
         {/* PUBLIC */}
-        <Route element={<PublicRoute />}>
+        {/* <Route element={<PublicRoute />}>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-        </Route>
+        </Route> */}
 
         {/* WEBSITE */}
         <Route element={<WebsiteLayout />}>
