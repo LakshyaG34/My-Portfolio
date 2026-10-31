@@ -9,6 +9,27 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { FaUserCircle, FaBars, FaTimes } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 
+const renderStaggeredLabel = (label) => (
+  <span className="nav-hover-label" aria-hidden="true">
+    {[false, true].map((isHoverLabel) => (
+      <span
+        className={`nav-hover-phrase${isHoverLabel ? " nav-hover-phrase-hover" : ""}`}
+        key={`${label}-${isHoverLabel}`}
+      >
+        {[...label].map((letter, index) => (
+          <span
+            className="nav-hover-letter"
+            key={`${isHoverLabel}-${index}`}
+            style={{ "--nav-letter-index": index }}
+          >
+            {letter === " " ? "\u00a0" : letter}
+          </span>
+        ))}
+      </span>
+    ))}
+  </span>
+);
+
 const Nav = () => {
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
@@ -137,9 +158,10 @@ const Nav = () => {
                 whileTap={{ scale: 0.95 }}
                 data-hover-effect="off"
                 onClick={() => navigate(link.path)}
-                className={`relative group transition ${location.pathname === link.path ? "text-violet-700" : "text-slate-600 hover:text-violet-700"}`}
+                className={`nav-page-link relative group transition ${location.pathname === link.path ? "text-violet-700" : "text-slate-600"}`}
+                aria-label={link.name}
               >
-                {link.name}
+                {renderStaggeredLabel(link.name)}
                 <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-violet-500 transition-all group-hover:w-full"></span>
               </motion.button>
             ))}
@@ -239,11 +261,10 @@ const Nav = () => {
                       navigate(link.path);
                       setMobileMenuOpen(false);
                     }}
-                    className="relative group text-left"
+                    className="nav-page-link relative group text-left text-slate-700 text-lg font-medium transition"
+                    aria-label={link.name}
                   >
-                    <span className="text-slate-700 hover:text-violet-700 text-lg font-medium transition">
-                      {link.name}
-                    </span>
+                    {renderStaggeredLabel(link.name)}
                     <span className="absolute left-0 -bottom-2 w-0 h-[2px] bg-violet-500 transition-all group-hover:w-full"></span>
                   </motion.button>
                 ))}
