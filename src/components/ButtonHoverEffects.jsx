@@ -2,7 +2,7 @@ import { useLayoutEffect } from "react";
 import gsap from "gsap";
 
 const BUTTON_SELECTOR =
-  'button:not([disabled]):not([data-hover-effect="off"]), [role="button"]:not([aria-disabled="true"]):not([data-hover-effect="off"]), a[href][class*="bg-"]:not([data-hover-effect="off"])';
+  'button:not([disabled]):not([data-hover-effect="off"]):not([class*="rdp-"]), [role="button"]:not([aria-disabled="true"]):not([data-hover-effect="off"]):not([class*="rdp-"]), a[href][class*="bg-"]:not([data-hover-effect="off"])';
 
 function isOpaqueBackground(color) {
   const alphaChannel = color.match(/\/\s*([\d.]+)(%)?/);
@@ -36,27 +36,37 @@ function makePhrase(label, className) {
   return phrase;
 }
 
-function createHoverLayer(button, currentColor, surface, currentLabel) {
+function createHoverLayer(button, currentColor, surface, currentLabel, hoverLabel) {
   const layer = document.createElement("span");
   layer.className = "button-hover-layer";
   layer.setAttribute("aria-hidden", "true");
 
   const fill = document.createElement("span");
-  fill.className = "button-hover-fill";
+  fill.className = `button-hover-fill button-hover-fill-${surface}`;
   fill.style.clipPath = surface === "solid"
     ? "circle(150% at 0% 100%)"
     : "circle(0% at 0% 100%)";
   layer.append(fill);
 
   const labels = document.createElement("span");
-  labels.className = "button-hover-label";
+  labels.className = `button-hover-label button-hover-label-${surface}`;
   const currentPhrase = makePhrase(currentLabel, "button-hover-current");
-  currentPhrase.style.color = currentColor;
+  currentPhrase.style.setProperty(
+    "color",
+    surface === "solid" ? "#ffffff" : currentColor || "#7652d6",
+    "important"
+  );
+  const nextPhrase = makePhrase(hoverLabel, "button-hover-next");
+  nextPhrase.style.setProperty(
+    "color",
+    surface === "solid" ? "#7652d6" : "#ffffff",
+    "important"
+  );
   labels.append(currentPhrase);
-  labels.append(makePhrase("Click ME", "button-hover-next"));
+  labels.append(nextPhrase);
   layer.append(labels);
   button.append(layer);
-  return { layer, fill, labels };
+  return { layer, fill, labels, currentPhrase, nextPhrase };
 }
 
 export default function ButtonHoverEffects() {
@@ -77,24 +87,43 @@ export default function ButtonHoverEffects() {
       originalPositions.delete(button);
     };
 
+    const clearHoverState = (button) => {
+      if (!button) return;
+      if (button._buttonHoverTimeline) {
+        button._buttonHoverTimeline.kill();
+        delete button._buttonHoverTimeline;
+      }
+      button._buttonHoverLayer?.remove();
+      delete button._buttonHoverLayer;
+      delete button.dataset.hoverEffectActive;
+      button.style.removeProperty("color");
+      button.style.removeProperty("-webkit-text-fill-color");
+      button.style.removeProperty("text-shadow");
+      restorePosition(button);
+    };
+
     const enter = (button) => {
       if (!button || button === activeButton || !button.matches(BUTTON_SELECTOR)) return;
       if (button.hasAttribute("disabled") || button.getAttribute("aria-disabled") === "true") return;
       if (activeButton) leave(activeButton);
-      if (button._buttonHoverTimeline) {
-        button._buttonHoverTimeline.kill();
-        button._buttonHoverLayer?.remove();
-        delete button._buttonHoverLayer;
-        delete button._buttonHoverTimeline;
-      }
+      clearHoverState(button);
 
-      const surface = classifyButton(button);
-      const currentLabel = (button.innerText || button.getAttribute("aria-label") || button.title || "Action")
+      const currentLabel = (button.innerText || button.getAttribute("aria-label") || button.title || "")
         .replace(/\s+/g, " ")
         .trim();
+      if (!currentLabel) return;
+
+      const hoverLabel = button.dataset.hoverText || button.getAttribute("data-hover-label") || "Click ME";
+      const surface = classifyButton(button);
       const currentColor = getComputedStyle(button).color;
       activeButton = button;
       button.dataset.hoverEffectActive = "true";
+
+      // Completely hide original text nodes and content during hover
+      button.style.setProperty("color", "transparent", "important");
+      button.style.setProperty("-webkit-text-fill-color", "transparent", "important");
+      button.style.setProperty("text-shadow", "none", "important");
+
       if (getComputedStyle(button).position === "static") {
         if (!originalPositions.has(button)) {
           originalPositions.set(button, [button.style.position, button.style.getPropertyPriority("position")]);
@@ -102,9 +131,18 @@ export default function ButtonHoverEffects() {
         button.style.position = "relative";
       }
 
-      const { layer, fill, labels } = createHoverLayer(button, currentColor, surface, currentLabel);
+      const { layer, fill, labels, currentPhrase, nextPhrase } = createHoverLayer(
+        button,
+        currentColor,
+        surface,
+        currentLabel,
+        hoverLabel
+      );
       const currentLetters = labels.querySelectorAll(".button-hover-current .button-hover-letter");
       const nextLetters = labels.querySelectorAll(".button-hover-next .button-hover-letter");
+
+      gsap.set(currentPhrase, { visibility: "visible" });
+      gsap.set(nextPhrase, { visibility: "hidden" });
       gsap.set(currentLetters, { yPercent: 0, opacity: 1 });
       gsap.set(nextLetters, { yPercent: 115, opacity: 0 });
 
@@ -116,10 +154,8 @@ export default function ButtonHoverEffects() {
       const timeline = gsap.timeline({ paused: true });
       timeline
         .to(fill, {
-          clipPath: surface === "solid"
-            ? "circle(0% at 0% 100%)"
-            : "circle(150% at 0% 100%)",
-          duration: 0.56,
+          clipPath: "circle(150% at 0% 100%)",
+          duration: 0.52,
           ease: "power3.out",
         }, 0)
         .to(currentLetters, {
@@ -129,17 +165,20 @@ export default function ButtonHoverEffects() {
           stagger: currentExitStagger,
           ease: "power3.in",
         }, currentExitAt)
-        .set(labels.querySelector(".button-hover-current"), {
+        .set(currentPhrase, {
           visibility: "hidden",
         }, currentExitEnd)
+        .set(nextPhrase, {
+          visibility: "visible",
+        }, nextEntryAt)
         .fromTo(nextLetters, {
           yPercent: 115,
           opacity: 0,
         }, {
           yPercent: 0,
           opacity: 1,
-          duration: 0.4,
-          stagger: 0.026,
+          duration: 0.38,
+          stagger: 0.024,
           ease: "power3.out",
         }, nextEntryAt);
 
@@ -154,21 +193,23 @@ export default function ButtonHoverEffects() {
       const layer = button._buttonHoverLayer;
       const timeline = button._buttonHoverTimeline;
       if (!layer || !timeline) {
-        restorePosition(button);
+        clearHoverState(button);
         return;
       }
       timeline.eventCallback("onReverseComplete", () => {
-        layer.remove();
-        delete button.dataset.hoverEffectActive;
-        delete button._buttonHoverLayer;
-        delete button._buttonHoverTimeline;
-        restorePosition(button);
+        clearHoverState(button);
       });
       timeline.reverse();
     }
 
-    const findButton = (target) =>
-      target instanceof Element ? target.closest(BUTTON_SELECTOR) : null;
+    const findButton = (target) => {
+      if (!(target instanceof Element)) return null;
+      const button = target.closest(BUTTON_SELECTOR);
+      if (!button) return null;
+      if (button.closest('[role="dialog"], [role="grid"], [data-slot="popover-content"], .rdp')) return null;
+      return button;
+    };
+
     const onPointerOver = (event) => {
       const button = findButton(event.target);
       if (button && !button.contains(event.relatedTarget)) enter(button);
@@ -201,14 +242,8 @@ export default function ButtonHoverEffects() {
       document.removeEventListener("focusin", onFocusIn);
       document.removeEventListener("focusout", onFocusOut);
       observer.disconnect();
-      if (activeButton?._buttonHoverTimeline) {
-        activeButton._buttonHoverTimeline.kill();
-        activeButton._buttonHoverLayer?.remove();
-        delete activeButton._buttonHoverLayer;
-        delete activeButton._buttonHoverTimeline;
-        delete activeButton.dataset.hoverEffectActive;
-        restorePosition(activeButton);
-      }
+      document.querySelectorAll("[data-hover-effect-active]").forEach(clearHoverState);
+      if (activeButton) clearHoverState(activeButton);
     };
   }, []);
 

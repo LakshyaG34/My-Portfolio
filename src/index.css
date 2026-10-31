@@ -214,6 +214,14 @@ textarea {
   inset: 0;
   z-index: 0;
   clip-path: circle(0% at 0% 100%);
+  pointer-events: none;
+}
+
+.button-hover-fill-solid {
+  background-color: #5533b3;
+}
+
+.button-hover-fill-transparent {
   background-color: #7652d6;
 }
 
@@ -226,10 +234,12 @@ textarea {
   overflow: hidden;
   line-height: 1.35;
   color: white !important;
+  -webkit-text-fill-color: currentColor !important;
   font: inherit;
   font-weight: 650;
   white-space: nowrap;
   text-align: center;
+  pointer-events: none;
 }
 
 .button-hover-phrase {
@@ -239,19 +249,15 @@ textarea {
   align-items: center;
   justify-content: center;
   white-space: pre;
+  -webkit-text-fill-color: currentColor !important;
+  pointer-events: none;
 }
 
 .button-hover-letter {
   display: inline-block;
   transform-style: preserve-3d;
-}
-
-[data-hover-effect-active="true"] {
-  color: transparent !important;
-}
-
-[data-hover-effect-active="true"] > :not(.button-hover-layer) {
-  opacity: 0 !important;
+  -webkit-text-fill-color: currentColor !important;
+  pointer-events: none;
 }
 
 [data-button-surface="solid"] {
@@ -261,13 +267,24 @@ textarea {
   color: #fff !important;
 }
 
-[data-button-surface="solid"][data-hover-effect-active="true"] {
-  background-color: transparent !important;
-}
-
 [data-button-surface="transparent"] {
   background-color: transparent !important;
   background-image: none !important;
+}
+
+/* Ensure original button text nodes and child elements are completely invisible when hover effect is active */
+[data-hover-effect-active="true"],
+[data-button-surface="solid"][data-hover-effect-active="true"],
+[data-button-surface="transparent"][data-hover-effect-active="true"] {
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: none !important;
+}
+
+[data-hover-effect-active="true"] > :not(.button-hover-layer) {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
 
 [data-hover-effect-active="true"] {
