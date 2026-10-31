@@ -14,10 +14,10 @@ const HeroP1 = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-500/10 border border-yellow-500/20 mb-8"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-500/10 border border-violet-500/20 mb-8"
         >
-          <Sparkles className="w-4 h-4 text-yellow-600" />
-          <span className="text-sm font-medium text-yellow-700">
+          <Sparkles className="w-4 h-4 text-violet-600" />
+          <span className="text-sm font-medium text-violet-700">
             Trusted by 10,000+ businesses
           </span>
         </motion.div>
@@ -33,7 +33,7 @@ const HeroP1 = () => {
             Powerful Products.
           </span>
           <br />
-          <span className="bg-gradient-to-r from-yellow-500 via-yellow-600 to-orange-500 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-violet-500 via-violet-600 to-violet-500 bg-clip-text text-transparent">
             Built for Modern Businesses.
           </span>
         </motion.h1>
@@ -65,14 +65,14 @@ const HeroP1 = () => {
                 .getElementById("heroP2")
                 ?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="group relative px-8 py-4 bg-gradient-to-r from-yellow-500 to-yellow-600 text-white rounded-xl font-semibold hover:from-yellow-600 hover:to-yellow-700 transition-all duration-300 shadow-lg hover:shadow-xl overflow-hidden"
+            className="group relative px-8 py-4 bg-gradient-to-r from-violet-500 to-violet-600 text-white rounded-xl font-semibold hover:from-violet-600 hover:to-violet-700 transition-all duration-300 shadow-lg hover:shadow-xl overflow-hidden"
           >
             <span className="relative z-10 flex items-center gap-2">
               Explore Products
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </span>
             <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-yellow-600 to-yellow-700"
+              className="absolute inset-0 bg-gradient-to-r from-violet-600 to-violet-700"
               initial={{ x: "100%" }}
               whileHover={{ x: 0 }}
               transition={{ duration: 0.3 }}
@@ -83,7 +83,7 @@ const HeroP1 = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => navigate("/contact")}
-            className="px-8 py-4 bg-white border-2 border-gray-200 text-gray-700 rounded-xl font-semibold hover:border-yellow-500 hover:text-yellow-600 transition-all duration-300 shadow-sm hover:shadow-md"
+            className="px-8 py-4 bg-white border-2 border-gray-200 text-gray-700 rounded-xl font-semibold hover:border-violet-500 hover:text-violet-600 transition-all duration-300 shadow-sm hover:shadow-md"
           >
             Contact Sales
           </motion.button>
@@ -102,7 +102,7 @@ const HeroP1 = () => {
             { icon: Sparkles, text: "AI-Powered" },
           ].map((feature, index) => (
             <div key={index} className="flex items-center gap-2 text-gray-600">
-              <feature.icon className="w-5 h-5 text-yellow-500" />
+              <feature.icon className="w-5 h-5 text-violet-500" />
               <span className="text-sm font-medium">{feature.text}</span>
             </div>
           ))}

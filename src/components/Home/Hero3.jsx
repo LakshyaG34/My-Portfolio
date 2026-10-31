@@ -66,14 +66,14 @@ const Hero3 = () => {
         className="flex justify-between items-center mb-12"
       >
         <h2 className="text-3xl font-semibold">
-          Client <span className="text-yellow-400">Reviews</span>
+          Client <span className="text-violet-600">Reviews</span>
         </h2>
 
         <div className="flex gap-4">
           <motion.button
             whileHover={{ scale: 1.15, rotate: -6 }}
             whileTap={{ scale: 0.9 }}
-            className="swiper-button-prev-custom cursor-pointer rounded-full p-2 text-gray-400 hover:text-yellow-400 hover:bg-white/5 transition-all duration-300"
+            className="swiper-button-prev-custom cursor-pointer rounded-full p-2 text-slate-600 hover:text-violet-600 hover:bg-white/5 transition-all duration-300"
           >
             <IoArrowBackCircle size={40} />
           </motion.button>
@@ -81,7 +81,7 @@ const Hero3 = () => {
           <motion.button
             whileHover={{ scale: 1.15, rotate: 6 }}
             whileTap={{ scale: 0.9 }}
-            className="swiper-button-next-custom cursor-pointer rounded-full p-2 text-gray-400 hover:text-yellow-400 hover:bg-white/5 transition-all duration-300"
+            className="swiper-button-next-custom cursor-pointer rounded-full p-2 text-slate-600 hover:text-violet-600 hover:bg-white/5 transition-all duration-300"
           >
             <IoArrowForwardCircle size={40} />
           </motion.button>

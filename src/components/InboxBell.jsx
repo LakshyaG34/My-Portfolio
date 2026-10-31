@@ -102,11 +102,11 @@ export default function InboxBell({ userId }) {
           {/* List */}
           <div className="overflow-y-auto flex-1">
             {loading && items.length === 0 && (
-              <div className="px-4 py-8 text-center text-sm text-gray-400">Loading…</div>
+              <div className="px-4 py-8 text-center text-sm text-slate-600">Loading…</div>
             )}
 
             {!loading && items.length === 0 && (
-              <div className="px-4 py-12 text-center text-sm text-gray-400">
+              <div className="px-4 py-12 text-center text-sm text-slate-600">
                 {showRead ? 'No notifications yet' : "You're all caught up 🎉"}
               </div>
             )}
@@ -130,7 +130,7 @@ export default function InboxBell({ userId }) {
                         {item.body}
                       </div>
                     )}
-                    <div className="text-[11px] text-gray-400 mt-1">
+                    <div className="text-[11px] text-slate-600 mt-1">
                       {timeAgo(item.created_at)}
                     </div>
                   </div>
@@ -139,7 +139,7 @@ export default function InboxBell({ userId }) {
                     aria-label="Delete"
                     onClick={(e) => { e.stopPropagation(); deleteOne(item.id); }}
                     className="opacity-0 group-hover:opacity-100 transition p-1 rounded
-                               hover:bg-gray-200 text-gray-400 hover:text-gray-600"
+                               hover:bg-gray-200 text-slate-600 hover:text-gray-600"
                   >
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
                          stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

@@ -18,7 +18,7 @@ const Unauthorized = () => {
       {/* Animated Background Shapes */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-red-200 dark:bg-red-900/20 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-200 dark:bg-yellow-900/20 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-violet-200 dark:bg-yellow-900/20 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
         <div className="absolute top-40 left-1/2 w-80 h-80 bg-orange-200 dark:bg-orange-900/20 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
       </div>
 
@@ -41,11 +41,11 @@ const Unauthorized = () => {
           {/* Content */}
           <div className="p-8 space-y-6">
             <div className="text-center">
-              <UserX className="w-16 h-16 text-gray-400 dark:text-gray-500 mx-auto mb-3" />
+              <UserX className="w-16 h-16 text-slate-600 dark:text-gray-500 mx-auto mb-3" />
               <h2 className="text-2xl font-semibold text-gray-800 dark:text-white mb-2">
                 Access Restricted
               </h2>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-gray-600 dark:text-slate-600">
                 You've attempted to access a page that requires higher privileges{dots}
               </p>
             </div>
@@ -85,7 +85,7 @@ const Unauthorized = () => {
 
             {/* Help Text */}
             <div className="text-center pt-2">
-              <p className="text-xs text-gray-500 dark:text-gray-400">
+              <p className="text-xs text-gray-500 dark:text-slate-600">
                 Error Code: 403_UNAUTHORIZED_ACCESS
               </p>
             </div>

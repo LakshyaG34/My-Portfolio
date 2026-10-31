@@ -43,7 +43,7 @@ const HeroS3 = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="border border-white/10 rounded-xl p-6 flex flex-wrap justify-between items-center gap-8 text-gray-400"
+        className="border border-white/10 rounded-xl p-6 flex flex-wrap justify-between items-center gap-8 text-slate-600"
       >
         <div className="flex items-center gap-2">
           <FaReact size={22} />
@@ -93,7 +93,7 @@ const HeroS3 = () => {
           Beautiful digital products, totally customized in minutes.
         </h2>
 
-        <div className="space-y-4 text-gray-400">
+        <div className="space-y-4 text-slate-600">
           <p>
             We design scalable and modern applications using proven technologies
             that help businesses build faster and grow efficiently.
@@ -109,14 +109,14 @@ const HeroS3 = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="bg-zinc-900 rounded-xl p-6 grid md:grid-cols-3 gap-8 text-center"
+        className="glass-panel rounded-2xl p-6 grid md:grid-cols-3 gap-8 text-center"
       >
         <motion.div
           variants={item}
           whileHover={{ y: -6 }}
           className="flex flex-col items-center gap-3"
         >
-          <FaCheckCircle size={26} className="text-yellow-400" />
+          <FaCheckCircle size={26} className="text-violet-600" />
           <p className="text-sm">
             Save time and build better with our modern development stack.
           </p>
@@ -159,19 +159,19 @@ const HeroS3 = () => {
             Describe your products for all customers
           </h3>
 
-          <ul className="space-y-3 text-gray-400">
+          <ul className="space-y-3 text-slate-600">
             <li className="flex items-center gap-2">
-              <FaCheckCircle className="text-yellow-400" />
+              <FaCheckCircle className="text-violet-600" />
               Add a feature section about the product.
             </li>
 
             <li className="flex items-center gap-2">
-              <FaCheckCircle className="text-yellow-400" />
+              <FaCheckCircle className="text-violet-600" />
               Add a feature section about the product.
             </li>
 
             <li className="flex items-center gap-2">
-              <FaCheckCircle className="text-yellow-400" />
+              <FaCheckCircle className="text-violet-600" />
               Add a feature section about the product.
             </li>
           </ul>

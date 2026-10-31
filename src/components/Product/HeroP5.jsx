@@ -15,7 +15,7 @@ const HeroP5 = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm text-gray-300 mb-6"
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm text-slate-600 mb-6"
         >
           <Sparkles className="w-4 h-4 text-purple-400" />
           What's Next
@@ -29,7 +29,7 @@ const HeroP5 = () => {
           className="text-4xl md:text-6xl font-semibold leading-tight mb-6"
         >
           Building the{" "}
-          <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-orange-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-violet-500 bg-clip-text text-transparent">
             Future of Digital Products
           </span>
         </motion.h2>
@@ -39,7 +39,7 @@ const HeroP5 = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-gray-400 text-lg max-w-2xl mx-auto mb-10"
+          className="text-slate-600 text-lg max-w-2xl mx-auto mb-10"
         >
           We’re working on a set of powerful upcoming projects designed to push
           innovation forward. Explore what’s coming next.
@@ -50,7 +50,7 @@ const HeroP5 = () => {
           initial={{ width: 0 }}
           whileInView={{ width: "120px" }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="h-[2px] bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 mx-auto mb-10"
+          className="h-[2px] bg-gradient-to-r from-purple-500 via-pink-500 to-violet-500 mx-auto mb-10"
         />
 
         {/* Bottom Hint */}

@@ -40,22 +40,22 @@ const Hero6 = () => {
   });
 
   return (
-    <section className="relative w-full py-24 bg-black overflow-hidden">
+    <section className="relative w-full py-24 bg-transparent overflow-hidden">
       {/* Heading */}
       <div className="max-w-6xl mx-auto text-center px-6">
-        <p className="text-sm tracking-widest text-yellow-400 mb-4">
+        <p className="text-sm tracking-widest text-violet-600 mb-4">
           DESIGN SHOWCASE
         </p>
 
         <h2 className="text-3xl md:text-5xl font-bold leading-tight">
           Get Your Desired
-          <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-violet-600 to-violet-500 bg-clip-text text-transparent">
             {" "}
             Design
           </span>
         </h2>
 
-        <p className="text-gray-400 mt-6 text-lg max-w-2xl mx-auto">
+        <p className="text-slate-600 mt-6 text-lg max-w-2xl mx-auto">
           Explore some of the beautiful UI sections and we will craft it using modern
           technologies and stunning design systems.
         </p>
@@ -82,7 +82,7 @@ const Hero6 = () => {
                 md:h-[240px]
                 rounded-xl
                 overflow-hidden
-                bg-zinc-900
+                bg-white/70 border border-violet-100 shadow-xl shadow-violet-950/5 backdrop-blur-xl
                 border border-white/10
                 shadow-lg
               "

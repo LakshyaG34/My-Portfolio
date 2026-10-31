@@ -21,13 +21,13 @@ const HeroP2 = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-500/10 to-yellow-600/10 border border-yellow-500/20 mb-6"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-violet-500/10 to-violet-600/10 border border-violet-500/20 mb-6"
           >
-            <Bell className="w-4 h-4 text-yellow-600" />
-            <span className="text-sm font-semibold text-yellow-700">
+            <Bell className="w-4 h-4 text-violet-600" />
+            <span className="text-sm font-semibold text-violet-700">
               OneNotify Platform
             </span>
-            <span className="text-xs bg-yellow-500 text-white px-2 py-0.5 rounded-full ml-2">
+            <span className="text-xs bg-violet-500 text-white px-2 py-0.5 rounded-full ml-2">
               v3.0
             </span>
           </motion.div>
@@ -43,7 +43,7 @@ const HeroP2 = () => {
               Engage Users
             </span>
             <br />
-            <span className="bg-gradient-to-r from-yellow-500 via-yellow-600 to-orange-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-violet-500 via-violet-600 to-violet-500 bg-clip-text text-transparent">
               Instantly & Intelligently
             </span>
           </motion.h2>
@@ -137,14 +137,14 @@ const HeroP2 = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="group relative px-8 py-4 bg-gradient-to-r from-yellow-500 to-yellow-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
+                className="group relative px-8 py-4 bg-gradient-to-r from-violet-500 to-violet-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
               >
                 <span className="relative z-10 flex items-center gap-2">
                   Get Started Free
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-yellow-600 to-orange-600"
+                  className="absolute inset-0 bg-gradient-to-r from-violet-600 to-violet-600"
                   initial={{ x: "100%" }}
                   whileHover={{ x: 0 }}
                   transition={{ duration: 0.3 }}
@@ -160,7 +160,7 @@ const HeroP2 = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-white border-2 border-gray-200 text-gray-700 rounded-xl font-semibold hover:border-yellow-500 hover:text-yellow-600 transition-all duration-300 shadow-sm hover:shadow-md flex items-center gap-2"
+                className="px-8 py-4 bg-white border-2 border-gray-200 text-gray-700 rounded-xl font-semibold hover:border-violet-500 hover:text-violet-600 transition-all duration-300 shadow-sm hover:shadow-md flex items-center gap-2"
               >
                 View Documentation
                 <TrendingUp className="w-4 h-4" />
@@ -211,14 +211,14 @@ const HeroP2 = () => {
             <div className="bg-gray-800/50 px-6 py-4 border-b border-gray-700">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <Bell className="w-5 h-5 text-yellow-500" />
+                  <Bell className="w-5 h-5 text-violet-500" />
                   <span className="text-white font-semibold">
                     Notification Center
                   </span>
                 </div>
                 <div className="flex gap-1">
                   <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-violet-500"></div>
                   <div className="w-3 h-3 rounded-full bg-green-500"></div>
                 </div>
               </div>
@@ -230,10 +230,10 @@ const HeroP2 = () => {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4 }}
-                className="bg-gradient-to-r from-yellow-500/20 to-yellow-500/10 rounded-xl p-4 border border-yellow-500/30"
+                className="bg-gradient-to-r from-violet-500/20 to-violet-500/10 rounded-xl p-4 border border-violet-500/30"
               >
                 <div className="flex items-start gap-3">
-                  <div className="p-2 bg-yellow-500 rounded-lg">
+                  <div className="p-2 bg-violet-500 rounded-lg">
                     <Zap className="w-4 h-4 text-white" />
                   </div>
                   <div className="flex-1">
@@ -241,17 +241,17 @@ const HeroP2 = () => {
                       <h4 className="text-white font-semibold">
                         🚀 New Feature Released!
                       </h4>
-                      <span className="text-xs text-gray-400">Just now</span>
+                      <span className="text-xs text-slate-600">Just now</span>
                     </div>
-                    <p className="text-sm text-gray-300 mt-1">
+                    <p className="text-sm text-slate-600 mt-1">
                       Check out the latest update in your dashboard now.
                     </p>
                     <div className="flex items-center gap-3 mt-2">
-                      <span className="text-xs text-yellow-400">
+                      <span className="text-xs text-violet-600">
                         ✨ AI-powered insights
                       </span>
                       <span className="text-xs text-gray-500">•</span>
-                      <span className="text-xs text-gray-400">
+                      <span className="text-xs text-slate-600">
                         98% delivered
                       </span>
                     </div>
@@ -274,9 +274,9 @@ const HeroP2 = () => {
                       <h4 className="text-white font-semibold">
                         Weekly Report Ready
                       </h4>
-                      <span className="text-xs text-gray-400">2 hours ago</span>
+                      <span className="text-xs text-slate-600">2 hours ago</span>
                     </div>
-                    <p className="text-sm text-gray-300 mt-1">
+                    <p className="text-sm text-slate-600 mt-1">
                       Your engagement increased by 45% this week.
                     </p>
                   </div>
@@ -298,9 +298,9 @@ const HeroP2 = () => {
                       <h4 className="text-white font-semibold">
                         Segment Updated
                       </h4>
-                      <span className="text-xs text-gray-400">Yesterday</span>
+                      <span className="text-xs text-slate-600">Yesterday</span>
                     </div>
-                    <p className="text-sm text-gray-300 mt-1">
+                    <p className="text-sm text-slate-600 mt-1">
                       New user segment: High-value customers.
                     </p>
                   </div>
@@ -312,12 +312,12 @@ const HeroP2 = () => {
             <div className="bg-gray-800/50 px-6 py-4 border-t border-gray-700">
               <div className="flex justify-between text-sm">
                 <div>
-                  <p className="text-gray-400">Sent to</p>
+                  <p className="text-slate-600">Sent to</p>
                   <p className="text-white font-bold text-lg">12,450</p>
                   <p className="text-xs text-gray-500">users</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-gray-400">Delivery Rate</p>
+                  <p className="text-slate-600">Delivery Rate</p>
                   <p className="text-white font-bold text-lg">98.2%</p>
                   <p className="text-xs text-green-400">↑ 2.3%</p>
                 </div>

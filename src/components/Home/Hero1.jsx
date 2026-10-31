@@ -82,14 +82,14 @@ const Hero1 = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-black text-white px-6 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center bg-white/55 text-slate-900 px-6 overflow-hidden">
       {/* Spotlight glow */}
       <div
         className="pointer-events-none absolute inset-0 transition duration-300"
         style={{
           background: `radial-gradient(
             600px at ${mousePosition.x}px ${mousePosition.y}px,
-            rgba(255, 214, 10, 0.15),
+            rgba(151, 117, 230, 0.16),
             transparent 80%
           )`,
         }}
@@ -104,7 +104,7 @@ const Hero1 = () => {
           initial={{ scale: 0, rotate: -20 }}
           animate={{ scale: 1, rotate: 0 }}
           transition={{ duration: 0.6 }}
-          className="flex items-center bg-yellow-400 text-black px-3 py-2 rounded-lg"
+          className="flex items-center bg-violet-600 text-white px-3 py-2 rounded-xl shadow-lg shadow-violet-500/20"
         >
           <TbLetterL size={20} />
           <TbLetterG size={20} />
@@ -117,7 +117,7 @@ const Hero1 = () => {
           transition={{ duration: 0.7 }}
           className="text-4xl md:text-5xl font-bold leading-tight"
         >
-          <span className="bg-gradient-to-r from-yellow-400 via-yellow-200 to-yellow-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-violet-700 via-violet-500 to-violet-700 bg-clip-text text-transparent">
             Lakshya Goyal.
           </span>
           Building production-grade software for modern businesses.
@@ -128,7 +128,7 @@ const Hero1 = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
-          className="text-gray-400 text-lg max-w-2xl min-h-[80px]"
+          className="text-slate-600 text-lg max-w-2xl min-h-[80px]"
         >
           {displayText}
           <span className="animate-pulse">|</span>
@@ -138,13 +138,13 @@ const Hero1 = () => {
         <motion.button
           whileHover={{
             scale: 1.05,
-            boxShadow: "0px 0px 20px rgba(255,221,0,0.5)",
+            boxShadow: "0px 8px 24px rgba(124,91,210,0.24)",
           }}
           whileTap={{ scale: 0.95 }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           onClick={() => navigate("/services")}
-          className="bg-white text-black px-6 py-3 rounded-lg font-medium transition"
+          className="bg-violet-600 text-white px-6 py-3 font-medium shadow-lg shadow-violet-500/20 transition rounded-lg"
         >
           Explore Services
         </motion.button>
@@ -154,7 +154,7 @@ const Hero1 = () => {
           variants={containerVariants}
           initial="hidden"
           animate="show"
-          className="flex flex-wrap justify-center gap-10 pt-12 text-gray-400"
+          className="flex flex-wrap justify-center gap-10 pt-12 text-slate-600"
         >
           <motion.div
             variants={itemVariants}

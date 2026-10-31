@@ -32,7 +32,7 @@ const HeroA1 = () => {
       >
         <h2 className="text-4xl font-semibold">Our Team</h2>
 
-        <p className="text-gray-400 mt-3 max-w-2xl mx-auto">
+        <p className="text-slate-600 mt-3 max-w-2xl mx-auto">
           Our team combines expertise in modern web technologies, cloud
           infrastructure, and scalable system design to deliver high-quality
           solutions tailored to client needs.
@@ -52,18 +52,18 @@ const HeroA1 = () => {
           <motion.div
             variants={card}
             whileHover={{ y: -6 }}
-            className="bg-white/5 p-6 rounded-xl border border-white/10"
+            className="glass-panel p-6 rounded-2xl"
           >
             <div className="flex items-center gap-3 mb-4">
-              <FaServer className="text-yellow-400" />
+              <FaServer className="text-violet-600" />
               <h4 className="text-xl font-semibold">Manmohan Dagar</h4>
             </div>
 
-            <p className="text-gray-400 mb-2">
+            <p className="text-slate-600 mb-2">
               Chief Technology Officer (CTO)
             </p>
 
-            <p className="text-gray-400 text-sm">
+            <p className="text-slate-600 text-sm">
               Drives the technical architecture and innovation. Expert in
               system design, backend scalability, and leading engineering
               teams for high-performance applications.
@@ -74,20 +74,20 @@ const HeroA1 = () => {
           <motion.div
             variants={card}
             whileHover={{ y: -6 }}
-            className="bg-white/5 p-6 rounded-xl border border-white/10"
+            className="glass-panel p-6 rounded-2xl"
           >
             <div className="flex items-center gap-3 mb-4">
-              <FaCode className="text-yellow-400" />
+              <FaCode className="text-violet-600" />
               <h4 className="text-xl font-semibold">
                 Lakshya Goyal
               </h4>
             </div>
 
-            <p className="text-gray-400 mb-2">
+            <p className="text-slate-600 mb-2">
               Full Stack Developer (React.js & Node.js)
             </p>
 
-            <p className="text-gray-400 text-sm">
+            <p className="text-slate-600 text-sm">
               Builds modern web applications using React.js and Node.js.
               Responsible for frontend architecture, APIs, and seamless
               user experience.
@@ -98,20 +98,20 @@ const HeroA1 = () => {
           <motion.div
             variants={card}
             whileHover={{ y: -6 }}
-            className="bg-white/5 p-6 rounded-xl border border-white/10"
+            className="glass-panel p-6 rounded-2xl"
           >
             <div className="flex items-center gap-3 mb-4">
-              <FaCode className="text-yellow-400" />
+              <FaCode className="text-violet-600" />
               <h4 className="text-xl font-semibold">
                 Anshu Patel
               </h4>
             </div>
 
-            <p className="text-gray-400 mb-2">
+            <p className="text-slate-600 mb-2">
               Python Developer
             </p>
 
-            <p className="text-gray-400 text-sm">
+            <p className="text-slate-600 text-sm">
               Focused on backend systems, automation, and data-driven
               applications. Works on Python-based solutions including
               scheduling systems and APIs.
@@ -122,20 +122,20 @@ const HeroA1 = () => {
           <motion.div
             variants={card}
             whileHover={{ y: -6 }}
-            className="bg-white/5 p-6 rounded-xl border border-white/10"
+            className="glass-panel p-6 rounded-2xl"
           >
             <div className="flex items-center gap-3 mb-4">
-              <FaCloud className="text-yellow-400" />
+              <FaCloud className="text-violet-600" />
               <h4 className="text-xl font-semibold">
                 Akash Tyagi
               </h4>
             </div>
 
-            <p className="text-gray-400 mb-2">
+            <p className="text-slate-600 mb-2">
               DevOps & Cloud Engineer
             </p>
 
-            <p className="text-gray-400 text-sm">
+            <p className="text-slate-600 text-sm">
               Manages deployment pipelines, server infrastructure, and
               cloud environments. Ensures high availability, scalability,
               and secure deployments.

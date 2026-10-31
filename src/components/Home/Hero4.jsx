@@ -82,10 +82,10 @@ const Hero4 = () => {
         className="text-center mb-16"
       >
         <h2 className="text-3xl md:text-4xl font-semibold mb-4">
-          Why Choose <span className="text-yellow-400">ME?</span>
+          Why Choose <span className="text-violet-600">ME?</span>
         </h2>
 
-        <p className="text-gray-400 max-w-2xl mx-auto">
+        <p className="text-slate-600 max-w-2xl mx-auto">
           I combine modern technologies, scalable architectures and exceptional
           design to build digital products that help businesses grow faster.
         </p>

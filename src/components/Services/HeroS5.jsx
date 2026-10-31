@@ -37,7 +37,7 @@ const HeroS5 = () => {
       >
         <h2 className="text-4xl font-semibold">Website Development</h2>
 
-        <p className="text-gray-400 mt-3 max-w-2xl mx-auto">
+        <p className="text-slate-600 mt-3 max-w-2xl mx-auto">
           We create modern web applications with scalable architectures,
           beautiful interfaces, and high performance across all devices.
         </p>
@@ -49,7 +49,7 @@ const HeroS5 = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="border border-white/10 rounded-xl p-6 flex flex-wrap justify-center md:justify-between items-center gap-6 text-gray-400"
+        className="border border-white/10 rounded-xl p-6 flex flex-wrap justify-center md:justify-between items-center gap-6 text-slate-600"
       >
         <motion.div variants={item} className="flex items-center gap-2">
           <FaReact size={22} />
@@ -117,13 +117,13 @@ const HeroS5 = () => {
             Build scalable and high-performance web applications
           </h3>
 
-          <p className="text-gray-400">
+          <p className="text-slate-600">
             We design and develop fast, secure, and scalable web applications
             using modern frameworks and cloud-ready architectures. Our solutions
             focus on performance, usability, and long-term maintainability.
           </p>
 
-          <ul className="space-y-3 text-gray-400">
+          <ul className="space-y-3 text-slate-600">
             <li>✔ Modern frontend development with React</li>
             <li>✔ Scalable backend systems with Node & Django</li>
             <li>✔ REST APIs and microservices architecture</li>
@@ -134,7 +134,7 @@ const HeroS5 = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => navigate("/contact")}
-            className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-medium"
+            className="bg-violet-600 text-black px-6 py-3 rounded-lg font-medium"
           >
             Build Your Website →
           </motion.button>

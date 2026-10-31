@@ -30,7 +30,7 @@ const HeroP3 = () => {
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-violet-500"></div>
                   <div className="w-3 h-3 rounded-full bg-green-500"></div>
                 </div>
                 <span className="text-white text-sm font-semibold">
@@ -73,7 +73,7 @@ const HeroP3 = () => {
                     initial={{ width: 0 }}
                     animate={{ width: "25%" }}
                     transition={{ duration: 1, delay: 0.5 }}
-                    className="bg-gradient-to-r from-emerald-500 to-yellow-500 h-2 rounded-full"
+                    className="bg-gradient-to-r from-emerald-500 to-violet-500 h-2 rounded-full"
                   />
                 </div>
               </div>
@@ -86,7 +86,7 @@ const HeroP3 = () => {
                   </p>
                   <div className="flex items-center gap-2 mt-2">
                     <span className="text-xs text-gray-500">Difficulty:</span>
-                    <span className="text-xs font-semibold text-yellow-600 bg-yellow-100 px-2 py-0.5 rounded">
+                    <span className="text-xs font-semibold text-violet-600 bg-violet-100 px-2 py-0.5 rounded">
                       Medium
                     </span>
                   </div>
@@ -156,7 +156,7 @@ const HeroP3 = () => {
             <div className="bg-gray-50 px-6 py-3 border-t border-gray-200">
               <div className="flex justify-between text-sm">
                 <div className="flex items-center gap-2">
-                  <Eye className="w-4 h-4 text-gray-400" />
+                  <Eye className="w-4 h-4 text-slate-600" />
                   <span className="text-gray-600">Proctoring Active</span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -174,7 +174,7 @@ const HeroP3 = () => {
             className="absolute -top-5 -right-5 bg-white rounded-xl shadow-lg p-3 hidden lg:block"
           >
             <div className="flex items-center gap-2">
-              <Award className="w-4 h-4 text-yellow-500" />
+              <Award className="w-4 h-4 text-violet-500" />
               <span className="text-xs font-semibold text-gray-700">
                 AI Proctoring
               </span>
@@ -202,7 +202,7 @@ const HeroP3 = () => {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-emerald-500/10 to-yellow-500/10 border border-emerald-500/20 mb-6"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-emerald-500/10 to-violet-500/10 border border-emerald-500/20 mb-6"
           >
             <FileCheck className="w-4 h-4 text-emerald-600" />
             <span className="text-sm font-semibold text-emerald-700">
@@ -224,7 +224,7 @@ const HeroP3 = () => {
               Conduct Secure
             </span>
             <br />
-            <span className="bg-gradient-to-r from-emerald-500 via-emerald-600 to-yellow-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-emerald-500 via-emerald-600 to-violet-600 bg-clip-text text-transparent">
               Scalable Assessments
             </span>
           </motion.h2>
@@ -320,7 +320,7 @@ const HeroP3 = () => {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </span>
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-emerald-600 to-yellow-600"
+                className="absolute inset-0 bg-gradient-to-r from-emerald-600 to-violet-600"
                 initial={{ x: "100%" }}
                 whileHover={{ x: 0 }}
                 transition={{ duration: 0.3 }}

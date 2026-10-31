@@ -5,6 +5,8 @@ import { lazy, Suspense } from "react";
 import PublicRoute from "./utils/PublicRoutes";
 import WebsiteLayout from "./Layout/WebsiteLayout";
 import Unauthorized from "./pages/Unauthorized";
+import Demo from "./pages/Demo";
+import ButtonHoverEffects from "./components/ButtonHoverEffects";
 
 
 const Home = lazy(() => import("./pages/Home"));
@@ -22,10 +24,11 @@ function App() {
     <Suspense
       fallback={
         <div className="flex justify-center items-center min-h-screen">
-          <div className="w-10 h-10 border-4 border-yellow-400 border-t-transparent rounded-full animate-spin"></div>
+          <div className="w-10 h-10 border-4 border-violet-500 border-t-transparent rounded-full animate-spin"></div>
         </div>
       }
     >
+      <ButtonHoverEffects />
       <Routes>
         {/* PUBLIC */}
         {/* <Route element={<PublicRoute />}>
@@ -41,6 +44,7 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/careers" element={<Career />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/demo" element={<Demo />} />
         </Route>
 
         <Route path="/unauthorized" element={<Unauthorized />} />

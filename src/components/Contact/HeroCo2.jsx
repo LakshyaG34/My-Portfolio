@@ -135,9 +135,9 @@ const HeroCo2 = () => {
     <div className="min-h-screen flex items-center justify-center p-6 bg-black relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-amber-500/10 rounded-full mix-blend-screen filter blur-3xl animate-pulse" />
-        <div className="absolute top-1/2 -left-40 w-80 h-80 bg-amber-600/5 rounded-full mix-blend-screen filter blur-3xl animate-pulse delay-1000" />
-        <div className="absolute -bottom-40 right-1/3 w-72 h-72 bg-orange-500/10 rounded-full mix-blend-screen filter blur-3xl animate-pulse delay-2000" />
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-violet-500/10 rounded-full mix-blend-screen filter blur-3xl animate-pulse" />
+        <div className="absolute top-1/2 -left-40 w-80 h-80 bg-violet-600/5 rounded-full mix-blend-screen filter blur-3xl animate-pulse delay-1000" />
+        <div className="absolute -bottom-40 right-1/3 w-72 h-72 bg-violet-500/10 rounded-full mix-blend-screen filter blur-3xl animate-pulse delay-2000" />
         
         {/* Grid pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(251,191,36,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(251,191,36,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
@@ -148,10 +148,10 @@ const HeroCo2 = () => {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
-        className="relative bg-gray-900/60 backdrop-blur-2xl shadow-2xl rounded-3xl p-8 md:p-10 w-full max-w-2xl border border-amber-500/20 shadow-amber-500/10"
+        className="relative bg-gray-900/60 backdrop-blur-2xl shadow-2xl rounded-3xl p-8 md:p-10 w-full max-w-2xl border border-violet-500/20 shadow-violet-500/10"
       >
         {/* Glow effect */}
-        <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-amber-500/5 via-transparent to-amber-600/5 pointer-events-none" />
+        <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-violet-500/5 via-transparent to-violet-600/5 pointer-events-none" />
         
         {/* Success overlay */}
         <AnimatePresence>
@@ -175,10 +175,10 @@ const HeroCo2 = () => {
                   }}
                   transition={{ duration: 0.6, delay: 0.3 }}
                 >
-                  <CheckCircle2 className="w-20 h-20 text-amber-400 mx-auto mb-4" />
+                  <CheckCircle2 className="w-20 h-20 text-violet-500 mx-auto mb-4" />
                 </motion.div>
-                <h3 className="text-2xl font-bold text-amber-400 mb-2">Thank You!</h3>
-                <p className="text-gray-400">We'll get back to you soon</p>
+                <h3 className="text-2xl font-bold text-violet-500 mb-2">Thank You!</h3>
+                <p className="text-slate-600">We'll get back to you soon</p>
               </motion.div>
             </motion.div>
           )}
@@ -188,18 +188,18 @@ const HeroCo2 = () => {
           {/* Header */}
           <motion.div variants={itemVariants} className="text-center mb-8">
             <motion.div 
-              className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl mb-4 shadow-lg shadow-amber-500/25"
+              className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-violet-500 to-violet-600 rounded-2xl mb-4 shadow-lg shadow-violet-500/25"
               whileHover={{ rotate: [0, -10, 10, 0] }}
               transition={{ duration: 0.3 }}
             >
               <Flame className="w-8 h-8 text-black" />
             </motion.div>
-            <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-300 to-orange-400 mb-2">
+            <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-500 via-violet-400 to-violet-500 mb-2">
               Start Your Project
             </h2>
-            <p className="text-gray-400 text-sm">
+            <p className="text-slate-600 text-sm">
               Fill out the form and we'll get back to you within{" "}
-              <span className="text-amber-400 font-semibold">24 hours</span>
+              <span className="text-violet-500 font-semibold">24 hours</span>
             </p>
           </motion.div>
 
@@ -216,8 +216,8 @@ const HeroCo2 = () => {
                     <field.icon
                       className={`absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 transition-all duration-200 ${
                         focusedField === field.name
-                          ? "text-amber-400"
-                          : "text-gray-500 group-hover:text-amber-500/70"
+                          ? "text-violet-500"
+                          : "text-gray-500 group-hover:text-violet-500/70"
                       }`}
                     />
                     <input
@@ -232,10 +232,10 @@ const HeroCo2 = () => {
                       className={`w-full pl-12 pr-4 py-3.5 bg-black/40 border rounded-xl transition-all duration-200 text-gray-200 placeholder-gray-500
                         ${
                           focusedField === field.name
-                            ? "border-amber-400/50 shadow-lg shadow-amber-400/10 bg-black/60"
-                            : "border-gray-700 hover:border-amber-500/30"
+                            ? "border-violet-500/50 shadow-lg shadow-violet-500/10 bg-black/60"
+                            : "border-gray-700 hover:border-violet-500/30"
                         }
-                        ${formData[field.name] ? "border-amber-500/30" : ""}
+                        ${formData[field.name] ? "border-violet-500/30" : ""}
                         focus:outline-none
                       `}
                     />
@@ -243,7 +243,7 @@ const HeroCo2 = () => {
                     {focusedField === field.name && (
                       <motion.div
                         layoutId="glow"
-                        className="absolute bottom-0 left-4 right-4 h-px bg-gradient-to-r from-transparent via-amber-400 to-transparent"
+                        className="absolute bottom-0 left-4 right-4 h-px bg-gradient-to-r from-transparent via-violet-500 to-transparent"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.2 }}
@@ -263,8 +263,8 @@ const HeroCo2 = () => {
                   <FileText
                     className={`absolute left-4 top-4 w-5 h-5 transition-all duration-200 ${
                       focusedField === "projectDetails"
-                        ? "text-amber-400"
-                        : "text-gray-500 group-hover:text-amber-500/70"
+                        ? "text-violet-500"
+                        : "text-gray-500 group-hover:text-violet-500/70"
                     }`}
                   />
                   <textarea
@@ -279,17 +279,17 @@ const HeroCo2 = () => {
                     className={`w-full pl-12 pr-4 py-3.5 bg-black/40 border rounded-xl transition-all duration-200 text-gray-200 placeholder-gray-500 resize-none
                       ${
                         focusedField === "projectDetails"
-                          ? "border-amber-400/50 shadow-lg shadow-amber-400/10 bg-black/60"
-                          : "border-gray-700 hover:border-amber-500/30"
+                          ? "border-violet-500/50 shadow-lg shadow-violet-500/10 bg-black/60"
+                          : "border-gray-700 hover:border-violet-500/30"
                       }
-                      ${formData.projectDetails ? "border-amber-500/30" : ""}
+                      ${formData.projectDetails ? "border-violet-500/30" : ""}
                       focus:outline-none
                     `}
                   />
                   {focusedField === "projectDetails" && (
                     <motion.div
                       layoutId="glow"
-                      className="absolute bottom-0 left-4 right-4 h-px bg-gradient-to-r from-transparent via-amber-400 to-transparent"
+                      className="absolute bottom-0 left-4 right-4 h-px bg-gradient-to-r from-transparent via-violet-500 to-transparent"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.2 }}
@@ -308,7 +308,7 @@ const HeroCo2 = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full relative overflow-hidden bg-gradient-to-r from-amber-500 via-amber-400 to-orange-500 text-black py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-amber-500/25 disabled:opacity-50 disabled:cursor-not-allowed group"
+                className="w-full relative overflow-hidden bg-gradient-to-r from-violet-500 via-violet-500 to-violet-500 text-black py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-violet-500/25 disabled:opacity-50 disabled:cursor-not-allowed group"
               >
                 <span className="relative z-10 flex items-center justify-center gap-2">
                   {loading ? (
@@ -351,15 +351,15 @@ const HeroCo2 = () => {
           >
             <div className="flex items-center justify-center gap-4 text-xs text-gray-500">
               <span className="flex items-center gap-1">
-                <Zap className="w-3 h-3 text-amber-400" />
+                <Zap className="w-3 h-3 text-violet-500" />
                 Fast Response
               </span>
               <span className="flex items-center gap-1">
-                <Shield className="w-3 h-3 text-amber-400" />
+                <Shield className="w-3 h-3 text-violet-500" />
                 Secure & Private
               </span>
               <span className="flex items-center gap-1">
-                <Star className="w-3 h-3 text-amber-400" />
+                <Star className="w-3 h-3 text-violet-500" />
                 Free Consultation
               </span>
             </div>

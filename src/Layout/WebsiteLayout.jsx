@@ -9,9 +9,9 @@ const WebsiteLayout = () => {
       <Nav />
       <ScrollToTop />
 
-      <div className="pt-18 md:pt-0">
+      <main className="relative isolate min-h-[calc(100vh-5rem)] pt-18 md:pt-0">
         <Outlet />
-      </div>
+      </main>
 
       <Footer />
     </>

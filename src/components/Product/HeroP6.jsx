@@ -77,7 +77,7 @@ const HeroP6 = () => {
             {/* Main Description */}
             <motion.p
               variants={itemVariants}
-              className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6"
+              className="text-slate-600 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6"
             >
               An intelligent security scanner that crawls your site, discovers
               your API surface, and performs deep security checks across
@@ -141,7 +141,7 @@ const HeroP6 = () => {
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="text-white font-semibold text-sm sm:text-base">{feature.title}</p>
-                    <p className="text-gray-400 text-xs sm:text-sm">{feature.desc}</p>
+                    <p className="text-slate-600 text-xs sm:text-sm">{feature.desc}</p>
                   </div>
                 </motion.div>
               ))}
@@ -166,7 +166,7 @@ const HeroP6 = () => {
                     plain English
                   </span>{" "}
                   by your choice of leading AI models —
-                  <span className="text-yellow-400">
+                  <span className="text-violet-600">
                     {" "}
                     Claude, GPT, Gemini, or Perplexity
                   </span>{" "}
@@ -176,7 +176,7 @@ const HeroP6 = () => {
                 <div className="flex items-center gap-2 sm:gap-4 text-xs sm:text-sm">
                   <div className="flex items-center gap-1 sm:gap-2">
                     <Clock className="w-3 h-3 sm:w-4 sm:h-4 text-green-400" />
-                    <span className="text-gray-300 text-xs sm:text-sm">
+                    <span className="text-slate-600 text-xs sm:text-sm">
                       Cut review cycle from{" "}
                       <span className="text-green-400 font-bold">
                         days → minutes
@@ -192,7 +192,7 @@ const HeroP6 = () => {
               variants={itemVariants}
               className="flex flex-wrap gap-2 sm:gap-3 mb-6 sm:mb-8 overflow-x-auto pb-2 sm:pb-0"
             >
-              <span className="text-xs sm:text-sm text-gray-400 whitespace-nowrap">Choose your AI:</span>
+              <span className="text-xs sm:text-sm text-slate-600 whitespace-nowrap">Choose your AI:</span>
               {["Claude", "GPT-4", "Gemini", "Perplexity"].map((ai, idx) => (
                 <span
                   key={idx}
@@ -239,7 +239,7 @@ const HeroP6 = () => {
                   <div className="flex items-center gap-2 sm:gap-3">
                     <div className="flex gap-1">
                       <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-red-500"></div>
-                      <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-yellow-500"></div>
+                      <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-violet-500"></div>
                       <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-green-500"></div>
                     </div>
                     <span className="text-white text-xs sm:text-sm font-semibold">
@@ -248,7 +248,7 @@ const HeroP6 = () => {
                   </div>
                   <div className="flex items-center gap-1 sm:gap-2">
                     <Brain className="w-3 h-3 sm:w-4 sm:h-4 text-cyan-400" />
-                    <span className="text-[10px] sm:text-xs text-gray-400">
+                    <span className="text-[10px] sm:text-xs text-slate-600">
                       Powered by GPT-4
                     </span>
                   </div>
@@ -268,15 +268,15 @@ const HeroP6 = () => {
                 <div className="grid grid-cols-3 gap-2 sm:gap-4">
                   <div className="text-center">
                     <p className="text-lg sm:text-2xl font-bold text-white">1,284</p>
-                    <p className="text-[10px] sm:text-xs text-gray-400">Endpoints</p>
+                    <p className="text-[10px] sm:text-xs text-slate-600">Endpoints</p>
                   </div>
                   <div className="text-center">
                     <p className="text-lg sm:text-2xl font-bold text-red-400">47</p>
-                    <p className="text-[10px] sm:text-xs text-gray-400">Vulnerabilities</p>
+                    <p className="text-[10px] sm:text-xs text-slate-600">Vulnerabilities</p>
                   </div>
                   <div className="text-center">
                     <p className="text-lg sm:text-2xl font-bold text-green-400">98%</p>
-                    <p className="text-[10px] sm:text-xs text-gray-400">Coverage</p>
+                    <p className="text-[10px] sm:text-xs text-slate-600">Coverage</p>
                   </div>
                 </div>
               </div>
@@ -284,7 +284,7 @@ const HeroP6 = () => {
               {/* Vulnerability with AI Explanation */}
               <div className="p-4 sm:p-6 space-y-3 sm:space-y-4">
                 <div className="flex items-center justify-between flex-wrap gap-2">
-                  <p className="text-xs sm:text-sm font-semibold text-yellow-400">
+                  <p className="text-xs sm:text-sm font-semibold text-violet-600">
                     ⚠️ Critical Finding
                   </p>
                   <span className="text-[10px] sm:text-xs text-gray-500">CWE-287</span>
@@ -298,7 +298,7 @@ const HeroP6 = () => {
                       <p className="text-red-400 text-xs sm:text-sm font-semibold mb-1">
                         Broken Authentication
                       </p>
-                      <p className="text-gray-300 text-xs sm:text-sm break-words">
+                      <p className="text-slate-600 text-xs sm:text-sm break-words">
                         Token validation missing in{" "}
                         <span className="text-cyan-400 break-all">/api/user/update</span>{" "}
                         endpoint
@@ -323,7 +323,7 @@ const HeroP6 = () => {
                         🤖 AI Explanation (Plain English)
                       </p>
                       <p className="text-gray-200 text-xs sm:text-sm leading-relaxed mb-2 sm:mb-3">
-                        <span className="text-yellow-400">What's happening:</span>{" "}
+                        <span className="text-violet-600">What's happening:</span>{" "}
                         The API endpoint doesn't verify if the request is coming
                         from an authenticated user. This means anyone could
                         potentially modify another user's account information.
@@ -342,7 +342,7 @@ const HeroP6 = () => {
                             Code Example
                           </span>
                         </div>
-                        <pre className="text-[8px] sm:text-xs text-gray-300 font-mono whitespace-pre-wrap break-words">
+                        <pre className="text-[8px] sm:text-xs text-slate-600 font-mono whitespace-pre-wrap break-words">
 {`// Add authentication middleware
 app.put('/api/user/update', 
   authenticateToken,  // ← Add this line
@@ -356,7 +356,7 @@ app.put('/api/user/update',
                       {/* Verification Step */}
                       <div className="mt-2 sm:mt-3 flex items-center gap-1 sm:gap-2 pt-2 border-t border-cyan-500/20">
                         <CheckCircle2 className="w-2 h-2 sm:w-3 sm:h-3 text-green-400" />
-                        <span className="text-[10px] sm:text-xs text-gray-300">
+                        <span className="text-[10px] sm:text-xs text-slate-600">
                           Verification: Re-run scan to confirm fix
                         </span>
                       </div>
@@ -369,7 +369,7 @@ app.put('/api/user/update',
                   <div className="flex flex-col xs:flex-row items-start xs:items-center justify-between gap-2">
                     <div className="flex items-center gap-1 sm:gap-2">
                       <Clock className="w-3 h-3 sm:w-4 sm:h-4 text-green-400" />
-                      <span className="text-[11px] sm:text-sm text-gray-300">
+                      <span className="text-[11px] sm:text-sm text-slate-600">
                         Time to fix without AI:
                       </span>
                     </div>
@@ -390,16 +390,16 @@ app.put('/api/user/update',
               <div className="bg-gradient-to-r from-cyan-500/5 to-blue-500/5 px-4 sm:px-6 py-2 sm:py-3 border-t border-cyan-500/20 overflow-x-auto">
                 <div className="flex justify-between gap-2 sm:gap-4 text-[9px] sm:text-xs min-w-[280px] sm:min-w-0">
                   <div className="flex items-center gap-1 sm:gap-2">
-                    <GraduationCap className="w-2 h-2 sm:w-3 sm:h-3 text-gray-400" />
-                    <span className="text-gray-400 whitespace-nowrap">Step-by-step guidance</span>
+                    <GraduationCap className="w-2 h-2 sm:w-3 sm:h-3 text-slate-600" />
+                    <span className="text-slate-600 whitespace-nowrap">Step-by-step guidance</span>
                   </div>
                   <div className="flex items-center gap-1 sm:gap-2">
-                    <Code2 className="w-2 h-2 sm:w-3 sm:h-3 text-gray-400" />
-                    <span className="text-gray-400 whitespace-nowrap">Code examples</span>
+                    <Code2 className="w-2 h-2 sm:w-3 sm:h-3 text-slate-600" />
+                    <span className="text-slate-600 whitespace-nowrap">Code examples</span>
                   </div>
                   <div className="flex items-center gap-1 sm:gap-2">
-                    <CheckCircle2 className="w-2 h-2 sm:w-3 sm:h-3 text-gray-400" />
-                    <span className="text-gray-400 whitespace-nowrap">Verification</span>
+                    <CheckCircle2 className="w-2 h-2 sm:w-3 sm:h-3 text-slate-600" />
+                    <span className="text-slate-600 whitespace-nowrap">Verification</span>
                   </div>
                 </div>
               </div>
@@ -412,7 +412,7 @@ app.put('/api/user/update',
               className="absolute -top-4 -right-4 bg-gradient-to-br from-gray-900 to-black rounded-xl shadow-2xl p-3 border border-cyan-500/30 hidden lg:block"
             >
               <div className="flex items-center gap-2">
-                <Zap className="w-4 h-4 text-yellow-500" />
+                <Zap className="w-4 h-4 text-violet-500" />
                 <span className="text-xs font-semibold text-white">
                   <span className="text-green-400">93%</span> Faster Resolution
                 </span>

@@ -81,6 +81,188 @@ body {
     cubic-bezier(0, 0, 0.3, 1) forwards;
 }
 
+:root {
+    --foreground: #ededec;
+    --foreground-feint: #7a8180;
+    --background: #0d1111;
+    --layer: #13181a;
+    --border: #1e2427;
+    --accent: #e8eeee;
+    --accent-light: rgba(232, 238, 238, .08);
+    --accent-feint: rgba(232, 238, 238, .04);
+    --surface-deep: #060607;
+    --surface-deepest: #030304;
+    --accent-2: #8df0cc;
+    --accent-3: #a5b4fc;
+    --code-bg: #111112;
+    --code-border: #1e1e20;
+    --font-sans: "TASA Orbiter", "Inter", sans-serif;
+    --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    --max-width: 980px;
+    --bg-hue: 0deg;
+    --bg-grayscale: 0;
+    --dossier-stripe-angle: 119deg;
+    --dossier-stripe-color: color-mix(in srgb, var(--foreground) 10%, transparent);
+    --dossier-stripe-stroke: 1.5px;
+    --dossier-stripe-period: 8px;
+    --error: #ff5f57;
+    --on-accent: #fff;
+    --kicker-tracking-tight: .1em;
+    --kicker-tracking-loose: .18em;
+    --tier-s: #ffd60a;
+    --tier-s-bg: color-mix(in srgb, #ffd60a, transparent 90%);
+    --tier-a: #34d399;
+    --tier-a-bg: #34d39918;
+    --tier-b: #60a5fa;
+    --tier-b-bg: #60a5fa18;
+    --tier-c: #a78bfa;
+    --tier-c-bg: #a78bfa18;
+    --tier-d: #e879f9;
+    --tier-d-bg: #e879f918;
+    --tier-f: #f43f5e;
+    --tier-f-bg: #f43f5e18
+}
+
+[data-mode=dark] {
+    --foreground: #ededec;
+    --foreground-feint: #7a8180;
+    --background: #0d1111;
+    --layer: #13181a;
+    --border: #1e2427;
+    --accent: #e8eeee;
+    --accent-light: rgba(232, 238, 238, .08);
+    --accent-feint: rgba(232, 238, 238, .04);
+    --surface-deep: #060607;
+    --surface-deepest: #030304;
+    --accent-2: #8df0cc;
+    --accent-3: #a5b4fc;
+    --code-bg: #111112;
+    --code-border: #1e1e20;
+    --bg-hue: 0deg;
+    --bg-grayscale: 0
+}
+
+[data-mode=light] {
+    --foreground: #1a1a1c;
+    --foreground-feint: #6e6a64;
+    --background: #f8f8f6;
+    --layer: #ffffff;
+    --border: #e0e0de;
+    --accent: #1c1a18;
+    --accent-light: rgba(28, 26, 24, .08);
+    --accent-feint: rgba(28, 26, 24, .04);
+    --surface-deep: #f0f0ee;
+    --surface-deepest: #e8e8e6;
+    --accent-2: #059669;
+    --accent-3: #6366f1;
+    --code-bg: #f0f0ee;
+    --code-border: #e0e0de;
+    --bg-hue: 0deg;
+    --bg-grayscale: 0
+}
+
+[data-scheme=emerald] {
+    --foreground: #ededec;
+    --foreground-feint: #788680;
+    --background: #0b0d0f;
+    --layer: #111417;
+    --border: #1d2025;
+    --accent: #34d399;
+    --accent-light: rgba(52, 211, 153, .1);
+    --accent-feint: rgba(52, 211, 153, .06);
+    --surface-deep: #040c08;
+    --surface-deepest: #020806;
+    --code-bg: #131a17;
+    --code-border: #1f2a25;
+    --bg-hue: 100deg;
+    --bg-grayscale: .2
+}
+
+[data-scheme=rose] {
+    --foreground: #ededec;
+    --foreground-feint: #86787e;
+    --background: #0c0f10;
+    --layer: #121619;
+    --border: #1d2226;
+    --accent: #fb7185;
+    --accent-light: rgba(251, 113, 133, .1);
+    --accent-feint: rgba(251, 113, 133, .06);
+    --surface-deep: #0a0408;
+    --surface-deepest: #060206;
+    --code-bg: #1a1518;
+    --code-border: #2a2024;
+    --bg-hue: 300deg;
+    --bg-grayscale: .2
+}
+
+[data-scheme=amber] {
+    --foreground: #ededec;
+    --foreground-feint: #958d82;
+    --background: #0e1312;
+    --layer: #141a18;
+    --border: #1e2623;
+    --accent: #ffe023;
+    --accent-light: rgba(255, 224, 35, .1);
+    --accent-feint: rgba(255, 224, 35, .06);
+    --surface-deep: #0a0804;
+    --surface-deepest: #060402;
+    --code-bg: #1a1814;
+    --code-border: #2a2620;
+    --bg-hue: 0deg;
+    --bg-grayscale: .15
+}
+
+[data-mode=light][data-scheme=emerald] {
+    --foreground: #1a2e22;
+    --foreground-feint: #4a7a68;
+    --background: #f6faf8;
+    --layer: #ffffff;
+    --border: #d0e8dc;
+    --accent: #10b981;
+    --accent-light: rgba(16, 185, 129, .12);
+    --accent-feint: rgba(16, 185, 129, .06);
+    --surface-deep: #ecf6f0;
+    --surface-deepest: #e0f0e8;
+    --code-bg: #ecf6f0;
+    --code-border: #d0e8dc;
+    --bg-hue: 100deg;
+    --bg-grayscale: .3
+}
+
+[data-mode=light][data-scheme=rose] {
+    --foreground: #2e1a22;
+    --foreground-feint: #8a5a72;
+    --background: #fcf6f8;
+    --layer: #ffffff;
+    --border: #ecd0dc;
+    --accent: #fb7185;
+    --accent-light: rgba(251, 113, 133, .12);
+    --accent-feint: rgba(251, 113, 133, .06);
+    --surface-deep: #f8ecf0;
+    --surface-deepest: #f0e0e8;
+    --code-bg: #f8ecf0;
+    --code-border: #ecd0dc;
+    --bg-hue: 300deg;
+    --bg-grayscale: .3
+}
+
+[data-mode=light][data-scheme=amber] {
+    --foreground: #2e2a18;
+    --foreground-feint: #7a6a40;
+    --background: #fcfaf4;
+    --layer: #ffffff;
+    --border: #e8e0c8;
+    --accent: #ffe023;
+    --accent-light: rgba(255, 224, 35, .12);
+    --accent-feint: rgba(255, 224, 35, .06);
+    --surface-deep: #f6f0e4;
+    --surface-deepest: #f0e8d8;
+    --code-bg: #f6f0e4;
+    --code-border: #e8e0c8;
+    --bg-hue: 0deg;
+    --bg-grayscale: .25
+}
+
 @keyframes slideIn {
   from {
     transform: translateY(2rem);
@@ -121,4 +303,92 @@ body {
     rgba(113, 97, 159, 0) 100%
   );
   border-image-slice: 1;
+}
+
+
+.home-hero-actions {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 4px
+}
+
+.home-hero-actions .btn-caps-stripe-primary {
+    --foreground: var(--accent);
+    font-family: var(--font-mono);
+    min-height: 50px;
+    padding-inline: 26px;
+    background-color: var(--background);
+    color: var(--accent);
+    background-image: repeating-linear-gradient(119deg, color-mix(in srgb, var(--accent) 28%, transparent) 0px, color-mix(in srgb, var(--accent) 28%, transparent) 1px, transparent 1px, transparent 6px);
+    font-variation-settings: "wght" 680
+}
+
+.home-hero-actions .btn-caps-stripe-primary:hover {
+    color: var(--background)
+}
+
+.home-hero-actions .btn-caps-stripe-primary:before,
+.home-hero-actions .btn-caps-stripe-primary:hover:before {
+    background-image: linear-gradient(to right, var(--background) 8px, transparent 8px, transparent calc(100% - 8px), var(--background) calc(100% - 8px)), linear-gradient(to right, var(--background) 8px, transparent 8px, transparent calc(100% - 8px), var(--background) calc(100% - 8px)), linear-gradient(to bottom, var(--background) 8px, transparent 8px, transparent calc(100% - 8px), var(--background) calc(100% - 8px)), linear-gradient(to bottom, var(--background) 8px, transparent 8px, transparent calc(100% - 8px), var(--background) calc(100% - 8px))
+}
+
+/* White and violet liquid glass site foundation */
+:root {
+  color-scheme: light;
+  --foreground: #29243b;
+  --foreground-feint: #716b85;
+  --background: #faf9ff;
+  --layer: rgba(255, 255, 255, .72);
+  --border: rgba(139, 116, 205, .2);
+  --accent: #7652d6;
+  --accent-light: rgba(132, 98, 224, .12);
+  --accent-feint: rgba(132, 98, 224, .06);
+  --surface-deep: #f2effb;
+  --surface-deepest: #e9e3f8;
+  --accent-2: #8c69e8;
+  --accent-3: #b59bf5;
+  --code-bg: #f2effb;
+  --code-border: rgba(139, 116, 205, .2);
+  --color-primary: #7652d6;
+  --color-border: rgba(139, 116, 205, .2);
+  --body-bg-color: #faf9ff;
+  --body-color: #514b64;
+  --color-heading: #29243b;
+  --color-link: #7652d6;
+}
+
+html, body, #root { min-height: 100%; }
+body {
+  background-color: #faf9ff !important;
+  background-image:
+    radial-gradient(ellipse at 8% 4%, rgba(199, 180, 255, .28), transparent 36rem),
+    radial-gradient(ellipse at 92% 20%, rgba(222, 212, 255, .34), transparent 34rem),
+    linear-gradient(180deg, #fbfaff 0%, #f5f3fb 55%, #fbfaff 100%) !important;
+  color: #29243b !important;
+  font-family: 'Geist Variable', Inter, sans-serif;
+}
+*::-webkit-scrollbar-thumb { background: #a58be8; border-radius: 999px; }
+*::-webkit-scrollbar-thumb:hover { background: #7652d6; }
+
+.glass-panel {
+  background: rgba(255, 255, 255, .66);
+  border: 1px solid rgba(255, 255, 255, .8);
+  box-shadow: 0 18px 55px rgba(72, 52, 130, .09), inset 0 1px rgba(255,255,255,.9);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.home-hero-actions .btn-caps-stripe-primary:before {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0
+}
+
+.home-hero-actions .btn-caps-stripe-primary:hover:before {
+    top: -3px;
+    right: -3px;
+    bottom: -3px;
+    left: -3px
 }

@@ -51,7 +51,7 @@ const HeroS8 = () => {
           {/* Badge */}
           <motion.div
             variants={item}
-            className="inline-flex items-center gap-2 mb-6 px-4 py-1 text-xs tracking-widest border border-yellow-500/40 text-yellow-400 rounded-full"
+            className="inline-flex items-center gap-2 mb-6 px-4 py-1 text-xs tracking-widest border border-violet-500/40 text-violet-600 rounded-full"
           >
             <FaFigma className="text-pink-400 text-sm" />
             FIGMA TO CODE
@@ -63,7 +63,7 @@ const HeroS8 = () => {
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-white"
           >
             Have a{" "}
-            <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-violet-600 to-violet-500 bg-clip-text text-transparent">
               Figma Design
             </span>
             <br />
@@ -73,7 +73,7 @@ const HeroS8 = () => {
           {/* Description */}
           <motion.p
             variants={item}
-            className="text-gray-400 text-base sm:text-lg mt-6 leading-relaxed max-w-xl"
+            className="text-slate-600 text-base sm:text-lg mt-6 leading-relaxed max-w-xl"
           >
             Send us your Figma designs and we will transform them into
             high-performance, pixel-perfect web applications.
@@ -87,7 +87,7 @@ const HeroS8 = () => {
                 boxShadow: "0 0 30px rgba(255,200,0,0.6)"
               }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-black px-6 py-3 rounded-lg font-semibold transition"
+              className="flex items-center gap-2 bg-violet-600 hover:bg-violet-300 text-black px-6 py-3 rounded-lg font-semibold transition"
             >
               Get Your Design Built
               <FaFigma />
@@ -123,12 +123,12 @@ const HeroS8 = () => {
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
-              className="absolute inset-0 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 blur-2xl"
+              className="absolute inset-0 rounded-full bg-gradient-to-r from-violet-600 to-violet-500 blur-2xl"
             />
 
             {/* Icon Container */}
             <motion.div
-              className="relative w-40 h-40 sm:w-52 sm:h-52 md:w-64 md:h-64 lg:w-80 lg:h-80 flex items-center justify-center rounded-full border-2 border-yellow-500/30 shadow-2xl group-hover:border-yellow-500 transition-all duration-300"
+              className="relative w-40 h-40 sm:w-52 sm:h-52 md:w-64 md:h-64 lg:w-80 lg:h-80 flex items-center justify-center rounded-full border-2 border-violet-500/30 shadow-2xl group-hover:border-violet-500 transition-all duration-300"
               style={{
                 background: "linear-gradient(120deg,#111,#000,#222)",
                 backgroundSize: "200% 200%"
@@ -146,7 +146,7 @@ const HeroS8 = () => {
               {[...Array(6)].map((_, i) => (
                 <motion.div
                   key={i}
-                  className="absolute w-2 h-2 bg-yellow-400 rounded-full"
+                  className="absolute w-2 h-2 bg-violet-600 rounded-full"
                   animate={{ rotate: 360 }}
                   transition={{
                     duration: 6 + i,
@@ -165,7 +165,7 @@ const HeroS8 = () => {
 
               {/* Figma icon */}
               <FaFigma
-                className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-gray-400 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-yellow-400 group-hover:to-orange-500 group-hover:bg-clip-text transition-all duration-300"
+                className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-slate-600 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-violet-600 group-hover:to-violet-500 group-hover:bg-clip-text transition-all duration-300"
               />
             </motion.div>
 
@@ -175,7 +175,7 @@ const HeroS8 = () => {
               whileHover={{ opacity: 1, y: 0 }}
               className="absolute -bottom-12 left-1/2 transform -translate-x-1/2"
             >
-              <span className="text-xs font-mono text-yellow-400 bg-black/50 backdrop-blur-sm px-3 py-1 rounded-full border border-yellow-500/30">
+              <span className="text-xs font-mono text-violet-600 bg-black/50 backdrop-blur-sm px-3 py-1 rounded-full border border-violet-500/30">
                 Figma Expert ✨
               </span>
             </motion.div>

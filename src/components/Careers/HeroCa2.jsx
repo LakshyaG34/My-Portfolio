@@ -31,7 +31,7 @@ const HeroCa2 = () => {
 
             {/* Table Head */}
             <thead className="bg-white/5">
-              <tr className="text-gray-300">
+              <tr className="text-slate-600">
                 <th className="px-6 py-4">Position</th>
                 <th className="px-6 py-4">Department</th>
                 <th className="px-6 py-4">Location</th>
@@ -45,7 +45,7 @@ const HeroCa2 = () => {
               <tr className="border-t border-white/10">
                 <td
                   colSpan="4"
-                  className="px-6 py-10 text-center text-gray-400"
+                  className="px-6 py-10 text-center text-slate-600"
                 >
                   Currently there are no open positions.
                 </td>

@@ -39,7 +39,7 @@ const HeroS7 = () => {
       >
         <h2 className="text-4xl font-semibold">AI Integration</h2>
 
-        <p className="text-gray-400 mt-3 max-w-2xl mx-auto">
+        <p className="text-slate-600 mt-3 max-w-2xl mx-auto">
           We integrate modern AI systems into applications, enabling intelligent
           automation, AI assistants, and advanced data insights for businesses.
         </p>
@@ -51,7 +51,7 @@ const HeroS7 = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="border border-white/10 rounded-xl p-6 flex flex-wrap justify-center md:justify-between items-center gap-6 text-gray-400"
+        className="border border-white/10 rounded-xl p-6 flex flex-wrap justify-center md:justify-between items-center gap-6 text-slate-600"
       >
         <motion.div variants={item} className="flex items-center gap-2">
           <SiOpenai size={22} />
@@ -109,30 +109,30 @@ const HeroS7 = () => {
             Bring intelligence to your products
           </h3>
 
-          <p className="text-gray-400">
+          <p className="text-slate-600">
             Our team integrates powerful AI models and APIs into your
             applications to automate workflows, create smart assistants, and
             deliver intelligent user experiences.
           </p>
 
-          <ul className="space-y-3 text-gray-400">
+          <ul className="space-y-3 text-slate-600">
             <li className="flex items-center gap-3">
-              <MdOutlineAutoAwesome className="text-yellow-400" />
+              <MdOutlineAutoAwesome className="text-violet-600" />
               AI chatbot and virtual assistant integration
             </li>
 
             <li className="flex items-center gap-3">
-              <MdOutlineAutoAwesome className="text-yellow-400" />
+              <MdOutlineAutoAwesome className="text-violet-600" />
               LLM integrations (ChatGPT, Gemini, DeepSeek)
             </li>
 
             <li className="flex items-center gap-3">
-              <MdOutlineAutoAwesome className="text-yellow-400" />
+              <MdOutlineAutoAwesome className="text-violet-600" />
               AI-powered automation and workflow tools
             </li>
 
             <li className="flex items-center gap-3">
-              <MdOutlineAutoAwesome className="text-yellow-400" />
+              <MdOutlineAutoAwesome className="text-violet-600" />
               Recommendation and AI analytics systems
             </li>
           </ul>
@@ -141,7 +141,7 @@ const HeroS7 = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => navigate("/contact")}
-            className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-medium"
+            className="bg-violet-600 text-black px-6 py-3 rounded-lg font-medium"
           >
             Add AI to Your Product →
           </motion.button>

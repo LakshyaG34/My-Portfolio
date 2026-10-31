@@ -26,13 +26,13 @@ const HeroP4 = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.15 }}
           transition={{ duration: 1 }}
-          className="absolute -top-40 -right-40 w-96 h-96 bg-yellow-500 rounded-full blur-3xl"
+          className="absolute -top-40 -right-40 w-96 h-96 bg-violet-500 rounded-full blur-3xl"
         />
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.1 }}
           transition={{ duration: 1, delay: 0.3 }}
-          className="absolute -bottom-40 -left-40 w-96 h-96 bg-orange-500 rounded-full blur-3xl"
+          className="absolute -bottom-40 -left-40 w-96 h-96 bg-violet-500 rounded-full blur-3xl"
         />
         <motion.div
           initial={{ opacity: 0 }}
@@ -54,13 +54,13 @@ const HeroP4 = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 mb-6"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-violet-500/20 to-violet-500/20 border border-violet-500/30 mb-6"
           >
-            <Flame className="w-4 h-4 text-yellow-500" />
-            <span className="text-sm font-semibold text-yellow-400">
+            <Flame className="w-4 h-4 text-violet-500" />
+            <span className="text-sm font-semibold text-violet-600">
               ZYM Platform
             </span>
-            <span className="text-xs bg-yellow-500 text-black px-2 py-0.5 rounded-full ml-2 font-bold">
+            <span className="text-xs bg-violet-500 text-black px-2 py-0.5 rounded-full ml-2 font-bold">
               ALL-IN-ONE
             </span>
           </motion.div>
@@ -76,7 +76,7 @@ const HeroP4 = () => {
               Powering Modern
             </span>
             <br />
-            <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-violet-600 via-violet-500 to-violet-500 bg-clip-text text-transparent">
               Gyms End-to-End
             </span>
           </motion.h2>
@@ -86,7 +86,7 @@ const HeroP4 = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="mt-6 text-gray-300 text-lg leading-relaxed"
+            className="mt-6 text-slate-600 text-lg leading-relaxed"
           >
             A full-stack gym management SaaS — built and operated by us. From
             memberships to mobile apps, everything your gym needs in one
@@ -132,11 +132,11 @@ const HeroP4 = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.35 + index * 0.05 }}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="group relative bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 rounded-xl p-4 hover:border-yellow-500/50 transition-all duration-300 overflow-hidden"
+                className="group relative bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 rounded-xl p-4 hover:border-violet-500/50 transition-all duration-300 overflow-hidden"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/0 to-yellow-500/0 group-hover:from-yellow-500/5 group-hover:to-transparent transition-all duration-500" />
-                <feature.icon className="w-8 h-8 text-yellow-500 mb-3 group-hover:scale-110 transition-transform" />
-                <p className="text-sm font-semibold text-gray-300">
+                <div className="absolute inset-0 bg-gradient-to-r from-violet-500/0 to-violet-500/0 group-hover:from-violet-500/5 group-hover:to-transparent transition-all duration-500" />
+                <feature.icon className="w-8 h-8 text-violet-500 mb-3 group-hover:scale-110 transition-transform" />
+                <p className="text-sm font-semibold text-slate-600">
                   {feature.title}
                 </p>
                 <p className="text-xs text-gray-500">{feature.desc}</p>
@@ -159,14 +159,14 @@ const HeroP4 = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="group relative px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-black font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
+                className="group relative px-8 py-4 bg-gradient-to-r from-violet-500 to-violet-500 text-black font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
               >
                 <span className="relative z-10 flex items-center gap-2">
                   View Platform
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-400"
+                  className="absolute inset-0 bg-gradient-to-r from-violet-600 to-violet-500"
                   initial={{ x: "100%" }}
                   whileHover={{ x: 0 }}
                   transition={{ duration: 0.3 }}
@@ -182,7 +182,7 @@ const HeroP4 = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full font-semibold hover:bg-white/20 hover:border-yellow-500/50 transition-all duration-300 flex items-center gap-2"
+                className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full font-semibold hover:bg-white/20 hover:border-violet-500/50 transition-all duration-300 flex items-center gap-2"
               >
                 Watch Demo
                 <Zap className="w-4 h-4" />
@@ -202,7 +202,7 @@ const HeroP4 = () => {
                 {["💪", "🏋️", "🤸"].map((emoji, i) => (
                   <div
                     key={i}
-                    className="w-8 h-8 rounded-full bg-gradient-to-br from-yellow-500 to-orange-500 flex items-center justify-center text-sm border-2 border-black"
+                    className="w-8 h-8 rounded-full bg-gradient-to-br from-violet-500 to-violet-500 flex items-center justify-center text-sm border-2 border-black"
                   >
                     {emoji}
                   </div>
@@ -212,7 +212,7 @@ const HeroP4 = () => {
                 <p className="text-sm font-semibold text-white">
                   Trusted by 500+ gyms
                 </p>
-                <p className="text-xs text-gray-400">⭐ 4.9/5 rating on G2</p>
+                <p className="text-xs text-slate-600">⭐ 4.9/5 rating on G2</p>
               </div>
             </div>
             <div className="text-right">
@@ -239,7 +239,7 @@ const HeroP4 = () => {
                 <div className="flex items-center gap-3">
                   <div className="flex gap-1">
                     <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-violet-500"></div>
                     <div className="w-3 h-3 rounded-full bg-green-500"></div>
                   </div>
                   <span className="text-white text-sm font-semibold">
@@ -248,7 +248,7 @@ const HeroP4 = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-xs text-gray-400">Live Updates</span>
+                  <span className="text-xs text-slate-600">Live Updates</span>
                 </div>
               </div>
             </div>
@@ -258,10 +258,10 @@ const HeroP4 = () => {
               {/* Welcome Section */}
               <div className="mb-6">
                 <h3 className="text-xl font-bold text-white mb-1 flex items-center gap-2">
-                  <Flame className="w-6 h-6 text-yellow-500" />
+                  <Flame className="w-6 h-6 text-violet-500" />
                   Gym Overview
                 </h3>
-                <p className="text-xs text-gray-400">
+                <p className="text-xs text-slate-600">
                   Real-time analytics & metrics
                 </p>
               </div>
@@ -300,10 +300,10 @@ const HeroP4 = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4 + idx * 0.05 }}
                     whileHover={{ scale: 1.02 }}
-                    className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:border-yellow-500/30 transition-all"
+                    className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:border-violet-500/30 transition-all"
                   >
                     <div className="flex items-center justify-between mb-2">
-                      <stat.icon className="w-5 h-5 text-yellow-500" />
+                      <stat.icon className="w-5 h-5 text-violet-500" />
                       <span className="text-xs font-semibold text-green-400">
                         {stat.change}
                       </span>
@@ -311,18 +311,18 @@ const HeroP4 = () => {
                     <p className="text-2xl font-bold text-white">
                       {stat.value}
                     </p>
-                    <p className="text-xs text-gray-400 mt-1">{stat.label}</p>
+                    <p className="text-xs text-slate-600 mt-1">{stat.label}</p>
                   </motion.div>
                 ))}
               </div>
 
               {/* Recent Activity */}
-              <div className="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-xl p-4 border border-yellow-500/20">
+              <div className="bg-gradient-to-r from-violet-500/10 to-violet-500/10 rounded-xl p-4 border border-violet-500/20">
                 <div className="flex items-center justify-between mb-3">
-                  <p className="text-sm font-semibold text-yellow-400">
+                  <p className="text-sm font-semibold text-violet-600">
                     🔥 Recent Activity
                   </p>
-                  <Clock className="w-4 h-4 text-gray-400" />
+                  <Clock className="w-4 h-4 text-slate-600" />
                 </div>
                 <div className="space-y-2">
                   {[
@@ -348,7 +348,7 @@ const HeroP4 = () => {
                     >
                       <div className="flex items-center gap-2">
                         <CheckCircle2 className="w-3 h-3 text-green-500" />
-                        <span className="text-gray-300">
+                        <span className="text-slate-600">
                           <span className="font-semibold text-white">
                             {activity.member}
                           </span>{" "}
@@ -366,16 +366,16 @@ const HeroP4 = () => {
             <div className="bg-gradient-to-r from-gray-800/30 to-gray-900/30 px-6 py-3 border-t border-white/10">
               <div className="flex justify-between text-xs">
                 <div className="flex items-center gap-2">
-                  <Smartphone className="w-3 h-3 text-gray-400" />
-                  <span className="text-gray-400">Mobile App Ready</span>
+                  <Smartphone className="w-3 h-3 text-slate-600" />
+                  <span className="text-slate-600">Mobile App Ready</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Shield className="w-3 h-3 text-gray-400" />
-                  <span className="text-gray-400">Enterprise Security</span>
+                  <Shield className="w-3 h-3 text-slate-600" />
+                  <span className="text-slate-600">Enterprise Security</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <BarChart3 className="w-3 h-3 text-gray-400" />
-                  <span className="text-gray-400">Analytics</span>
+                  <BarChart3 className="w-3 h-3 text-slate-600" />
+                  <span className="text-slate-600">Analytics</span>
                 </div>
               </div>
             </div>
@@ -385,10 +385,10 @@ const HeroP4 = () => {
           <motion.div
             animate={{ y: [0, -10, 0] }}
             transition={{ repeat: Infinity, duration: 3, delay: 0 }}
-            className="absolute -top-5 -right-5 bg-gradient-to-br from-gray-900 to-black rounded-xl shadow-2xl p-3 border border-yellow-500/30 hidden lg:block"
+            className="absolute -top-5 -right-5 bg-gradient-to-br from-gray-900 to-black rounded-xl shadow-2xl p-3 border border-violet-500/30 hidden lg:block"
           >
             <div className="flex items-center gap-2">
-              <Award className="w-4 h-4 text-yellow-500" />
+              <Award className="w-4 h-4 text-violet-500" />
               <span className="text-xs font-semibold text-white">
                 Best Gym Software 2026
               </span>
@@ -398,10 +398,10 @@ const HeroP4 = () => {
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ repeat: Infinity, duration: 3, delay: 0.5 }}
-            className="absolute -bottom-5 -left-5 bg-gradient-to-br from-gray-900 to-black rounded-xl shadow-2xl p-3 border border-yellow-500/30 hidden lg:block"
+            className="absolute -bottom-5 -left-5 bg-gradient-to-br from-gray-900 to-black rounded-xl shadow-2xl p-3 border border-violet-500/30 hidden lg:block"
           >
             <div className="flex items-center gap-2">
-              <Flame className="w-4 h-4 text-orange-500" />
+              <Flame className="w-4 h-4 text-violet-500" />
               <span className="text-xs font-semibold text-white">
                 98% retention rate
               </span>
@@ -409,8 +409,8 @@ const HeroP4 = () => {
           </motion.div>
 
           {/* Glow Effects */}
-          <div className="absolute -top-20 -right-20 w-60 h-60 bg-yellow-500 blur-3xl opacity-20 rounded-full"></div>
-          <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-orange-500 blur-3xl opacity-20 rounded-full"></div>
+          <div className="absolute -top-20 -right-20 w-60 h-60 bg-violet-500 blur-3xl opacity-20 rounded-full"></div>
+          <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-violet-500 blur-3xl opacity-20 rounded-full"></div>
         </motion.div>
       </div>
 
@@ -431,7 +431,7 @@ const HeroP4 = () => {
             <motion.div
               animate={{ y: [0, 12, 0] }}
               transition={{ repeat: Infinity, duration: 1.5 }}
-              className="w-1 h-2 bg-yellow-500 rounded-full mt-2"
+              className="w-1 h-2 bg-violet-500 rounded-full mt-2"
             />
           </div>
         </motion.div> 

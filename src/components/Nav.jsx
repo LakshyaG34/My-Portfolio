@@ -107,7 +107,7 @@ const Nav = () => {
         variants={navVariants}
         animate={hidden ? "hidden" : "visible"}
         transition={{ duration: 0.35, ease: "easeInOut" }}
-        className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/40 border-b border-white/10"
+        className="fixed top-0 left-0 w-full z-50 backdrop-blur-2xl bg-white/70 border-b border-violet-200/70 shadow-[0_8px_32px_rgba(91,65,160,0.08)]"
       >
         <div className="flex justify-between items-center max-w-7xl mx-auto px-3 sm:px-6 py-3 sm:py-4 gap-2">
           {/* Logo */}
@@ -118,13 +118,13 @@ const Nav = () => {
             onClick={() => navigate("/")}
           >
             <img
-              src="/images/logo.png"
+              src="/images/mylogo-4.png"
               width={36}
               height={36}
               className="w-8 h-8 sm:w-10 sm:h-10"
               alt="LG logo"
             />
-            <span className="font-semibold text-base sm:text-lg tracking-white text-white">
+            <span className="font-semibold text-base sm:text-lg tracking-tight text-slate-900">
               Lakshya Goyal
             </span>
           </motion.div>
@@ -137,10 +137,10 @@ const Nav = () => {
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => navigate(link.path)}
-                className="relative group text-gray-300 hover:text-white transition"
+                className={`relative group transition ${location.pathname === link.path ? "text-violet-700" : "text-slate-600 hover:text-violet-700"}`}
               >
                 {link.name}
-                <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-yellow-400 transition-all group-hover:w-full"></span>
+                <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-violet-500 transition-all group-hover:w-full"></span>
               </motion.button>
             ))}
           </div>
@@ -151,15 +151,15 @@ const Nav = () => {
             <motion.button
               whileHover={{
                 scale: 1.05,
-                boxShadow: "0px 0px 12px rgba(255,215,0,0.5)",
+                boxShadow: "0px 8px 24px rgba(124,91,210,0.28)",
               }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => navigate("/login")}
-              className="hidden md:flex bg-yellow-400 text-black p-2 sm:px-4 sm:py-2 rounded-lg font-medium shrink-0 items-center justify-center gap-2"
+              onClick={() => navigate("/contact")}
+              className="hidden md:flex bg-violet-600 text-white p-2 sm:px-4 sm:py-2 font-medium shrink-0 items-center justify-center gap-2 shadow-lg shadow-violet-500/20 rounded-lg"
               aria-label="Login"
             >
               <FaUserCircle className="text-lg sm:text-xl" />
-              <span className="hidden sm:inline">Login</span>
+              <span className="hidden sm:inline">Contact Me</span>
             </motion.button>
 
             {/* Mobile Menu Button */}
@@ -167,7 +167,7 @@ const Nav = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden bg-yellow-400 text-black p-2 rounded-lg font-medium shrink-0"
+              className="md:hidden bg-violet-600 text-violet-800 p-2 font-medium shrink-0 rounded-lg"
               aria-label="Menu"
             >
               {mobileMenuOpen ? (
@@ -192,7 +192,7 @@ const Nav = () => {
               exit="exit"
               transition={{ duration: 0.3 }}
               onClick={() => setMobileMenuOpen(false)}
-              className="fixed inset-0 bg-black/70 backdrop-blur-sm z-40 md:hidden"
+              className="fixed inset-0 bg-violet-950/20 backdrop-blur-sm z-40 md:hidden"
             />
 
             {/* Mobile Menu Panel */}
@@ -201,10 +201,10 @@ const Nav = () => {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="fixed top-0 right-0 h-full w-full max-w-sm bg-gradient-to-br from-gray-900 to-gray-800 shadow-2xl z-50 md:hidden"
+              className="fixed top-0 right-0 h-full w-full max-w-sm bg-white/90 backdrop-blur-2xl border-l border-violet-100 shadow-2xl shadow-violet-950/10 z-50 md:hidden"
             >
               {/* Menu Header */}
-              <div className="flex justify-between items-center p-6 border-b border-white/10">
+              <div className="flex justify-between items-center p-6 border-b border-violet-100">
                 <div className="flex items-center gap-2">
                   <img
                     src="/images/logo.png"
@@ -213,7 +213,7 @@ const Nav = () => {
                     className="w-8 h-8"
                     alt="LG logo"
                   />
-                  <span className="font-semibold text-white text-lg">
+                  <span className="font-semibold text-slate-900 text-lg">
                     Lakshya Goyal
                   </span>
                 </div>
@@ -221,7 +221,7 @@ const Nav = () => {
                   whileHover={{ scale: 1.1, rotate: 90 }}
                   whileTap={{ scale: 0.9 }}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-gray-400 hover:text-white p-2"
+                  className="text-slate-500 hover:text-violet-700 p-2"
                 >
                   <MdClose className="text-2xl" />
                 </motion.button>
@@ -241,15 +241,15 @@ const Nav = () => {
                     }}
                     className="relative group text-left"
                   >
-                    <span className="text-gray-300 hover:text-white text-lg font-medium transition">
+                    <span className="text-slate-700 hover:text-violet-700 text-lg font-medium transition">
                       {link.name}
                     </span>
-                    <span className="absolute left-0 -bottom-2 w-0 h-[2px] bg-yellow-400 transition-all group-hover:w-full"></span>
+                    <span className="absolute left-0 -bottom-2 w-0 h-[2px] bg-violet-500 transition-all group-hover:w-full"></span>
                   </motion.button>
                 ))}
 
                 {/* Divider */}
-                <div className="h-px bg-white/10 my-2" />
+                <div className="h-px bg-violet-100 my-2" />
 
                 {/* Mobile Login Button */}
                 <motion.button
@@ -257,19 +257,19 @@ const Nav = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => {
-                    navigate("/login");
+                    navigate("/contact");
                     setMobileMenuOpen(false);
                   }}
-                  className="flex items-center justify-center gap-3 bg-yellow-400 text-black px-6 py-3 rounded-xl font-semibold text-base"
+                  className="flex items-center justify-center gap-3 bg-violet-600 text-white px-6 py-3 font-semibold text-base shadow-lg shadow-violet-500/20 rounded-xl"
                 >
                   <FaUserCircle className="text-xl" />
-                  <span>Login / Sign Up</span>
+                  <span>Contact</span>
                 </motion.button>
               </div>
 
               {/* Footer */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-white/10">
-                <p className="text-gray-500 text-xs text-center">
+              <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-violet-100">
+                <p className="text-slate-500 text-xs text-center">
                   © 2026 FunctionX. All rights reserved.
                 </p>
               </div>

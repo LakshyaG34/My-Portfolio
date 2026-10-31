@@ -8,20 +8,20 @@ import HeroP7 from "@/components/Product/HeroP7";
 
 const Products = () => {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-black text-white">
+    <div className="relative min-h-screen overflow-hidden bg-transparent text-slate-900">
       {/* GLOBAL BACKGROUND */}
 
       {/* Base Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black" />
+      <div className="absolute inset-0 bg-gradient-to-b from-violet-100/50 via-white/30 to-transparent" />
 
       {/* Glow 1 */}
       <div className="absolute top-[10%] left-[20%] w-[500px] h-[500px] bg-purple-500/20 blur-[120px] rounded-full" />
 
       {/* Glow 2 */}
-      <div className="absolute top-[40%] right-[10%] w-[400px] h-[400px] bg-orange-500/20 blur-[120px] rounded-full" />
+      <div className="absolute top-[40%] right-[10%] w-[400px] h-[400px] bg-violet-500/20 blur-[120px] rounded-full" />
 
       {/* Glow 3 */}
-      <div className="absolute bottom-[10%] left-[30%] w-[500px] h-[500px] bg-yellow-500/10 blur-[120px] rounded-full" />
+      <div className="absolute bottom-[10%] left-[30%] w-[500px] h-[500px] bg-violet-300/25 blur-[120px] rounded-full" />
 
       {/* Content */}
       <div className="relative sm:pt-18 space-y-32">

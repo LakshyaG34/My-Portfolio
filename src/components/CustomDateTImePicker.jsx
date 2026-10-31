@@ -50,7 +50,7 @@ export default function CustomDateTimePicker({
             onClick={() => setSelected(val)}
             className={`py-2 cursor-pointer snap-center ${
               selected === val
-                ? "bg-yellow-500 text-white font-semibold"
+                ? "bg-violet-500 text-white font-semibold"
                 : "hover:bg-gray-100"
             }`}
           >
@@ -69,11 +69,11 @@ export default function CustomDateTimePicker({
           type="button"
           className="w-full border border-gray-300 rounded-xl px-4 py-3 
           flex items-center justify-between text-left
-          hover:border-gray-400 focus:outline-none focus:ring-4 focus:ring-yellow-100 transition-all"
+          hover:border-gray-400 focus:outline-none focus:ring-4 focus:ring-violet-100 transition-all"
         >
           <div className="flex items-center gap-2 text-gray-700">
-            <CalendarIcon size={16} className="text-gray-400" />
-            <span className={value ? "text-gray-800" : "text-gray-400"}>
+            <CalendarIcon size={16} className="text-slate-600" />
+            <span className={value ? "text-gray-800" : "text-slate-600"}>
               {value
                 ? format(new Date(value), "dd MMM yyyy, HH:mm")
                 : placeholder}
@@ -118,7 +118,7 @@ export default function CustomDateTimePicker({
 
               <button
                 onClick={handleConfirm}
-                className="text-sm px-3 py-1 rounded-md bg-yellow-500 text-white hover:bg-yellow-600"
+                className="text-sm px-3 py-1 rounded-md bg-violet-500 text-white hover:bg-violet-600"
               >
                 OK
               </button>

@@ -47,7 +47,7 @@ const HeroS2 = () => {
 
         {/* Right CTA */}
         <div className="flex flex-col gap-4 items-start md:items-end">
-          <p className="text-gray-400">What's Your Next Idea?</p>
+          <p className="text-slate-600">What's Your Next Idea?</p>
 
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -90,16 +90,16 @@ const HeroS2 = () => {
           whileHover={{ y: -8 }}
           className="bg-white/5 backdrop-blur-lg p-6 rounded-2xl flex flex-col justify-center gap-6"
         >
-          <p className="text-gray-400">
+          <p className="text-slate-600">
             Understand your business needs, goals, and challenges through
             in-depth discussions.
           </p>
 
-          <p className="text-gray-400">
+          <p className="text-slate-600">
             Identify key areas where AI can create value and deliver impact.
           </p>
 
-          <p className="text-gray-400">
+          <p className="text-slate-600">
             Provide a roadmap for tailored AI solutions.
           </p>
         </motion.div>

@@ -48,7 +48,7 @@ const HeroS6 = () => {
           Cloud Integration & Infrastructure
         </h2>
 
-        <p className="text-gray-400 mt-3 max-w-2xl mx-auto">
+        <p className="text-slate-600 mt-3 max-w-2xl mx-auto">
           We help businesses integrate powerful cloud infrastructure into their
           applications, ensuring scalability, reliability, and global
           performance using modern cloud platforms.
@@ -61,7 +61,7 @@ const HeroS6 = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="border border-white/10 rounded-xl p-6 flex flex-wrap justify-center md:justify-between items-center gap-6 text-gray-400"
+        className="border border-white/10 rounded-xl p-6 flex flex-wrap justify-center md:justify-between items-center gap-6 text-slate-600"
       >
         <motion.div variants={item} className="flex items-center gap-2">
           <FaAws size={22} />
@@ -103,36 +103,36 @@ const HeroS6 = () => {
             Scalable cloud infrastructure for modern applications
           </h3>
 
-          <p className="text-gray-400">
+          <p className="text-slate-600">
             Our cloud experts design and implement secure and scalable
             infrastructure using industry-leading platforms. We help companies
             migrate, deploy, and optimize applications in the cloud to achieve
             high performance and global availability.
           </p>
 
-          <ul className="space-y-4 text-gray-400">
+          <ul className="space-y-4 text-slate-600">
             <li className="flex items-center gap-3">
-              <FaServer className="text-yellow-400" />
+              <FaServer className="text-violet-600" />
               AWS infrastructure setup and optimization
             </li>
 
             <li className="flex items-center gap-3">
-              <FaCloud className="text-yellow-400" />
+              <FaCloud className="text-violet-600" />
               Scalable server deployment using EC2
             </li>
 
             <li className="flex items-center gap-3">
-              <FaDatabase className="text-yellow-400" />
+              <FaDatabase className="text-violet-600" />
               Object storage solutions with S3
             </li>
 
             <li className="flex items-center gap-3">
-              <FaShieldAlt className="text-yellow-400" />
+              <FaShieldAlt className="text-violet-600" />
               CDN and edge optimization with Cloudflare
             </li>
 
             <li className="flex items-center gap-3">
-              <FaRocket className="text-yellow-400" />
+              <FaRocket className="text-violet-600" />
               Cloud deployment pipelines and automation
             </li>
           </ul>
@@ -141,7 +141,7 @@ const HeroS6 = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => navigate("/contact")}
-            className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-medium"
+            className="bg-violet-600 text-black px-6 py-3 rounded-lg font-medium"
           >
             Launch Your Infrastructure →
           </motion.button>

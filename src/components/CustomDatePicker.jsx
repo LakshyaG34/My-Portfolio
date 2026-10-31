@@ -27,8 +27,8 @@ export default function CustomDatePicker({
           hover:border-gray-400 focus:outline-none focus:ring-4 focus:ring-blue-100 transition-all"
         >
           <div className="flex items-center gap-2 text-gray-700">
-            <CalendarIcon size={16} className="text-gray-400" />
-            <span className={value ? "text-gray-800" : "text-gray-400"}>
+            <CalendarIcon size={16} className="text-slate-600" />
+            <span className={value ? "text-gray-800" : "text-slate-600"}>
               {value ? format(value, "dd MMM yyyy") : placeholder}
             </span>
           </div>

@@ -12,7 +12,7 @@ const HeroCa1 = () => {
         className="text-5xl md:text-6xl font-semibold leading-tight"
       >
         Join a team of
-        <span className="text-yellow-400"> passionate developers</span>
+        <span className="text-violet-600"> passionate developers</span>
       </motion.h1>
 
       {/* Subtext */}
@@ -20,7 +20,7 @@ const HeroCa1 = () => {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.6 }}
-        className="text-gray-400 max-w-2xl mx-auto mt-6 text-lg"
+        className="text-slate-600 max-w-2xl mx-auto mt-6 text-lg"
       >
         Build modern software, solve real-world problems, and work with
         talented engineers using cutting-edge technologies.
@@ -36,7 +36,7 @@ const HeroCa1 = () => {
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-medium"
+          className="bg-violet-600 text-black px-6 py-3 rounded-lg font-medium"
         >
           View Open Positions
         </motion.button>

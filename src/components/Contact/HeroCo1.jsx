@@ -11,7 +11,7 @@ const HeroCo1 = () => {
         Want to talk to Us Directly?
       </h1>
 
-      <p className="text-gray-400 mb-10">
+      <p className="text-slate-600 mb-10">
         Connect with us directly on WhatsApp and let's discuss your ideas.
       </p>
 

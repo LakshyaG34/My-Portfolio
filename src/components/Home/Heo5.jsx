@@ -34,7 +34,7 @@ const Hero5 = () => {
       />
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/70" />
+      <div className="absolute inset-0 bg-white/65 backdrop-blur-[2px]" />
 
       {/* Content */}
       <motion.div
@@ -47,7 +47,7 @@ const Hero5 = () => {
 
         <motion.p
           variants={item}
-          className="text-sm tracking-widest text-yellow-400 mb-4"
+          className="text-sm tracking-widest text-violet-600 mb-4"
         >
           BUILD WITH ME
         </motion.p>
@@ -58,14 +58,14 @@ const Hero5 = () => {
         >
           You imagine it.
           <br />
-          <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-violet-600 to-violet-500 bg-clip-text text-transparent">
             I'll engineer it.
           </span>
         </motion.h2>
 
         <motion.p
           variants={item}
-          className="text-gray-400 mt-6 text-lg max-w-2xl mx-auto"
+          className="text-slate-600 mt-6 text-lg max-w-2xl mx-auto"
         >
           Sit back while I design, build and deploys your digital
           product with modern technologies and scalable architectures.
@@ -79,7 +79,7 @@ const Hero5 = () => {
             }}
             whileTap={{ scale: 0.95 }}
             onClick={() => navigate("/contact")}
-            className="bg-yellow-400 text-black px-8 py-3 rounded-lg font-semibold"
+            className="bg-violet-600 text-black px-8 py-3 rounded-lg font-semibold"
           >
             Start Your Project →
           </motion.button>

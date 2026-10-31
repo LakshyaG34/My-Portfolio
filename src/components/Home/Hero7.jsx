@@ -42,7 +42,7 @@ const Hero7 = () => {
       >
         {/* Left Title */}
         <div className="max-w-2xl">
-          <p className="text-sm text-orange-500 font-semibold tracking-wide mb-2 flex items-center gap-2">
+          <p className="text-sm text-violet-500 font-semibold tracking-wide mb-2 flex items-center gap-2">
             <Sparkles className="w-4 h-4" />
             OUR PRODUCTS
           </p>
@@ -50,7 +50,7 @@ const Hero7 = () => {
           <h2 className="text-4xl md:text-5xl font-semibold leading-tight">
             Powerful Solutions,
             <br />
-            <span className="bg-gradient-to-r from-orange-500 via-orange-600 to-red-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-violet-500 via-violet-600 to-red-500 bg-clip-text text-transparent">
               Built for Modern Businesses
             </span>
           </h2>
@@ -58,13 +58,13 @@ const Hero7 = () => {
 
         {/* Right CTA */}
         <div className="flex flex-col gap-4 items-start md:items-end">
-          <p className="text-gray-400">Explore our complete ecosystem</p>
+          <p className="text-slate-600">Explore our complete ecosystem</p>
 
           <Link to="/products">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 rounded-full text-white font-medium transition shadow-lg"
+              className="px-6 py-3 bg-gradient-to-r from-violet-500 to-violet-600 hover:from-violet-600 hover:to-orange-700 rounded-full text-white font-medium transition shadow-lg"
             >
               See All Products →
             </motion.button>
@@ -99,13 +99,13 @@ const Hero7 = () => {
           {/* Content */}
           <div className="relative p-6 min-h-[420px] flex flex-col justify-between">
             <div>
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center mb-6">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-violet-500 to-red-500 flex items-center justify-center mb-6">
                 <Zap className="w-7 h-7 text-white" />
               </div>
 
-              <p className="text-orange-400 text-sm font-semibold mb-2">
+              <p className="text-violet-500 text-sm font-semibold mb-2">
                 OneNotify Platform
-                <span className="ml-2 text-xs bg-orange-500/20 px-2 py-0.5 rounded-full">
+                <span className="ml-2 text-xs bg-violet-500/20 px-2 py-0.5 rounded-full">
                   v3.0
                 </span>
               </p>
@@ -156,13 +156,13 @@ const Hero7 = () => {
 
           <div className="relative p-6 min-h-[420px] flex flex-col justify-between">
             <div>
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center mb-6">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-violet-500 to-red-500 flex items-center justify-center mb-6">
                 <Shield className="w-7 h-7 text-white" />
               </div>
 
-              <p className="text-orange-400 text-sm font-semibold mb-2">
+              <p className="text-violet-500 text-sm font-semibold mb-2">
                 ExamPortal
-                <span className="ml-2 text-xs bg-orange-500/20 px-2 py-0.5 rounded-full">
+                <span className="ml-2 text-xs bg-violet-500/20 px-2 py-0.5 rounded-full">
                   Enterprise
                 </span>
               </p>
@@ -217,14 +217,14 @@ const Hero7 = () => {
           <div className="relative p-6 min-h-[420px] flex flex-col justify-between">
             <div>
               {/* Icon */}
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center mb-6">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-violet-500 to-red-500 flex items-center justify-center mb-6">
                 <Rocket className="w-7 h-7 text-white" />
               </div>
 
               {/* Tag */}
-              <p className="text-orange-400 text-sm font-semibold mb-2 flex items-center gap-1">
+              <p className="text-violet-500 text-sm font-semibold mb-2 flex items-center gap-1">
                 ZYM Platform
-                <span className="text-xs bg-orange-500/20 px-2 py-0.5 rounded-full ml-2">
+                <span className="text-xs bg-violet-500/20 px-2 py-0.5 rounded-full ml-2">
                   All-in-One
                 </span>
               </p>
@@ -244,11 +244,11 @@ const Hero7 = () => {
               {/* Metrics */}
               <div className="flex items-center gap-4 pt-4 border-t border-white/20 mb-4">
                 <div className="flex items-center gap-1">
-                  <Users className="w-4 h-4 text-orange-400" />
+                  <Users className="w-4 h-4 text-violet-500" />
                   <span className="text-sm text-gray-200">500+ gyms</span>
                 </div>
                 <div className="flex items-center gap-1">
-                  <Star className="w-4 h-4 text-orange-400" />
+                  <Star className="w-4 h-4 text-violet-500" />
                   <span className="text-sm text-gray-200">4.8 rating</span>
                 </div>
               </div>
@@ -278,25 +278,25 @@ const Hero7 = () => {
       >
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
           <div>
-            <p className="text-3xl font-bold text-orange-500">10,000+</p>
+            <p className="text-3xl font-bold text-violet-500">10,000+</p>
             <p className="text-sm text-gray-500">Active Users</p>
           </div>
           <div>
-            <p className="text-3xl font-bold text-orange-500">99.9%</p>
+            <p className="text-3xl font-bold text-violet-500">99.9%</p>
             <p className="text-sm text-gray-500">Uptime SLA</p>
           </div>
           <div>
-            <p className="text-3xl font-bold text-orange-500">4.9/5</p>
+            <p className="text-3xl font-bold text-violet-500">4.9/5</p>
             <p className="text-sm text-gray-500">Customer Rating</p>
           </div>
           <div>
-            <p className="text-3xl font-bold text-orange-500">24/7</p>
+            <p className="text-3xl font-bold text-violet-500">24/7</p>
             <p className="text-sm text-gray-500">Support</p>
           </div>
         </div>
 
-        <div className="mt-8 flex justify-center gap-2 text-sm text-gray-400">
-          <Shield className="w-4 h-4 text-orange-500" />
+        <div className="mt-8 flex justify-center gap-2 text-sm text-slate-600">
+          <Shield className="w-4 h-4 text-violet-500" />
           <span>Enterprise Security</span>
           <span className="mx-2">•</span>
           <span>GDPR Compliant</span>

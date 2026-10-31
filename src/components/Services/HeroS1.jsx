@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 const HeroS1 = () => {
   const navigate = useNavigate();
   return (
-    <section className="min-h-[70vh] flex items-center justify-center px-6 bg-black text-white">
+    <section className="min-h-[70vh] flex items-center justify-center px-6 bg-white/55 text-slate-900">
 
       <div className="max-w-5xl text-center flex flex-col items-center gap-8">
 
@@ -19,7 +19,7 @@ const HeroS1 = () => {
         {/* <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-sm text-yellow-400 font-medium tracking-wide"
+          className="text-sm text-violet-600 font-medium tracking-wide"
         >
           OUR SERVICES
         </motion.div> */}
@@ -32,7 +32,7 @@ const HeroS1 = () => {
           className="text-4xl md:text-5xl font-bold leading-tight"
         >
           Engineering solutions that power{" "}
-          <span className="text-yellow-400">modern businesses</span>
+          <span className="text-violet-600">modern businesses</span>
         </motion.h1>
 
         {/* Description */}
@@ -40,7 +40,7 @@ const HeroS1 = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="text-gray-400 text-lg max-w-2xl"
+          className="text-slate-600 text-lg max-w-2xl"
         >
           We design, build, and scale digital products using cloud
           architectures, modern web technologies, and AI-driven systems
@@ -56,7 +56,7 @@ const HeroS1 = () => {
             onClick = {() =>{
               document.getElementById("heroS4")?.scrollIntoView({behavior : "smooth"})
             }}
-            className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-medium"
+            className="bg-violet-600 text-black px-6 py-3 rounded-lg font-medium"
           >
             Explore Services
           </motion.button>
@@ -77,7 +77,7 @@ const HeroS1 = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
-          className="flex flex-wrap justify-center gap-10 pt-8 text-gray-400"
+          className="flex flex-wrap justify-center gap-10 pt-8 text-slate-600"
         >
           <div className="flex items-center gap-2">
             <HiOutlineCodeBracket size={20} />

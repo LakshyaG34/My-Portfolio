@@ -86,7 +86,7 @@ const HeroCo3 = () => {
             variants={item}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="group flex items-center justify-between gap-4 rounded-xl border border-zinc-700/50 bg-zinc-800/40 px-4 py-3.5 backdrop-blur-sm transition-colors hover:border-emerald-500/50 hover:bg-zinc-800/70"
+            className="group flex items-center justify-between gap-4 rounded-xl border border-violet-200/70 bg-white/65 px-4 py-3.5 text-slate-800 shadow-sm backdrop-blur-xl transition-colors hover:border-violet-400 hover:bg-white/90"
           >
             <div className="flex items-center gap-3 min-w-0">
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-400 transition-colors group-hover:bg-emerald-500/20">

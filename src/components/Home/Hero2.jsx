@@ -28,7 +28,7 @@ const item = {
 
 const Hero2 = () => {
   return (
-    <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-black text-white">
+    <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-white/55 text-slate-900">
 
       {/* Background Image */}
       <motion.div
@@ -39,13 +39,13 @@ const Hero2 = () => {
       >
         <img
           src="/images/Home3.jpg"
-          className="w-full h-full object-cover opacity-40"
+          className="w-full h-full object-cover opacity-20"
           alt="background"
         />
       </motion.div>
 
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 bg-white/60 backdrop-blur-[2px]" />
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
@@ -58,14 +58,14 @@ const Hero2 = () => {
           viewport={{ once: true }}
           className="text-4xl md:text-5xl font-bold mb-6"
         >
-          Trusted by <span className="text-yellow-400">Innovative Teams</span>
+          Trusted by <span className="text-violet-600">Innovative Teams</span>
         </motion.h2>
 
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="text-gray-400 mb-14 max-w-2xl mx-auto"
+          className="text-slate-600 mb-14 max-w-2xl mx-auto"
         >
           Startups and businesses rely on FunctionX to build scalable digital
           products, modern applications, and cloud-powered platforms.
