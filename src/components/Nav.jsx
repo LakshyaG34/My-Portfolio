@@ -134,8 +134,8 @@ const Nav = () => {
             {navLinks.map((link, index) => (
               <motion.button
                 key={index}
-                whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.95 }}
+                data-hover-effect="off"
                 onClick={() => navigate(link.path)}
                 className={`relative group transition ${location.pathname === link.path ? "text-violet-700" : "text-slate-600 hover:text-violet-700"}`}
               >
@@ -233,8 +233,8 @@ const Nav = () => {
                   <motion.button
                     key={index}
                     variants={mobileLinkVariants}
-                    whileHover={{ x: 10 }}
                     whileTap={{ scale: 0.95 }}
+                    data-hover-effect="off"
                     onClick={() => {
                       navigate(link.path);
                       setMobileMenuOpen(false);

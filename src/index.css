@@ -236,7 +236,6 @@ textarea {
   color: white !important;
   -webkit-text-fill-color: currentColor !important;
   font: inherit;
-  font-weight: 650;
   white-space: nowrap;
   text-align: center;
   pointer-events: none;
@@ -258,6 +257,25 @@ textarea {
   transform-style: preserve-3d;
   -webkit-text-fill-color: currentColor !important;
   pointer-events: none;
+}
+
+.button-hover-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-hover-arrow svg {
+  display: block;
+  color: inherit;
+  stroke: currentColor;
+}
+
+.button-hover-label-preserve-style,
+.button-hover-label-preserve-style .button-hover-phrase {
+  color: inherit !important;
+  -webkit-text-fill-color: currentColor !important;
+  font: inherit;
 }
 
 [data-button-surface="solid"] {

@@ -23,20 +23,50 @@ function classifyButton(button) {
   return isSolid ? "solid" : "transparent";
 }
 
-function makePhrase(label, className) {
+const TRAILING_ARROW_PATTERN = /^(.*?)(?:\s*)(→|->|➜|➝|⟶|⇒|↗|↘|↪|›|»)\s*$/u;
+const ARROW_ICON_PATTERN = /(?:arrow|chevron|move-right|external-link)/i;
+
+function makePhrase(label, className, { icon, iconPosition = "end", iconGap = "0px" } = {}) {
   const phrase = document.createElement("span");
   phrase.className = `button-hover-phrase ${className}`;
   phrase.setAttribute("aria-hidden", "true");
+
+  const appendIcon = () => {
+    if (!icon) return;
+    const wrapper = document.createElement("span");
+    wrapper.className = "button-hover-arrow button-hover-letter";
+    wrapper.style.setProperty(iconPosition === "start" ? "margin-right" : "margin-left", iconGap);
+    const clonedIcon = icon.cloneNode(true);
+    clonedIcon.setAttribute("aria-hidden", "true");
+    clonedIcon.setAttribute("focusable", "false");
+    clonedIcon.className.baseVal = clonedIcon.className.baseVal
+      .split(/\s+/)
+      .filter((className) => !className.startsWith("group-hover:") && className !== "transition-transform")
+      .join(" ");
+    wrapper.append(clonedIcon);
+    phrase.append(wrapper);
+  };
+
+  if (icon && iconPosition === "start") appendIcon();
   [...label].forEach((character) => {
     const letter = document.createElement("span");
     letter.className = "button-hover-letter";
     letter.textContent = character === " " ? "\u00a0" : character;
     phrase.append(letter);
   });
+  if (icon && iconPosition === "end") appendIcon();
   return phrase;
 }
 
-function createHoverLayer(button, currentColor, surface, currentLabel, hoverLabel) {
+function getTrailingArrowIcon(button) {
+  const lastElement = button.lastElementChild;
+  if (!lastElement) return null;
+  const icon = lastElement.matches("svg") ? lastElement : lastElement.querySelector("svg");
+  if (!icon || !ARROW_ICON_PATTERN.test(icon.getAttribute("class") || "")) return null;
+  return icon;
+}
+
+function createHoverLayer(button, currentColor, surface, currentLabel, hoverLabel, arrow) {
   const layer = document.createElement("span");
   layer.className = "button-hover-layer";
   layer.setAttribute("aria-hidden", "true");
@@ -50,16 +80,23 @@ function createHoverLayer(button, currentColor, surface, currentLabel, hoverLabe
 
   const labels = document.createElement("span");
   labels.className = `button-hover-label button-hover-label-${surface}`;
-  const currentPhrase = makePhrase(currentLabel, "button-hover-current");
-  currentPhrase.style.setProperty(
-    "color",
-    surface === "solid" ? "#ffffff" : currentColor || "#7652d6",
-    "important"
-  );
-  const nextPhrase = makePhrase(hoverLabel, "button-hover-next");
+  const computedGap = getComputedStyle(button).columnGap;
+  const iconGap = computedGap === "normal" ? "0.25em" : computedGap;
+  const currentPhrase = makePhrase(currentLabel, "button-hover-current", {
+    icon: arrow?.icon,
+    iconPosition: "end",
+    iconGap,
+  });
+  const labelColor = arrow ? currentColor || "#7652d6" : surface === "solid" ? "#ffffff" : currentColor || "#7652d6";
+  currentPhrase.style.setProperty("color", labelColor, "important");
+  const nextPhrase = makePhrase(hoverLabel, "button-hover-next", {
+    icon: arrow?.icon,
+    iconPosition: "start",
+    iconGap,
+  });
   nextPhrase.style.setProperty(
     "color",
-    surface === "solid" ? "#7652d6" : "#ffffff",
+    arrow ? labelColor : surface === "solid" ? "#7652d6" : "#ffffff",
     "important"
   );
   labels.append(currentPhrase);
@@ -113,7 +150,18 @@ export default function ButtonHoverEffects() {
         .trim();
       if (!currentLabel) return;
 
-      const hoverLabel = button.dataset.hoverText || button.getAttribute("data-hover-label") || "Click ME";
+      const textArrow = currentLabel.match(TRAILING_ARROW_PATTERN);
+      const trailingArrowIcon = textArrow ? null : getTrailingArrowIcon(button);
+      const arrow = textArrow
+        ? { kind: "text", symbol: textArrow[2] }
+        : trailingArrowIcon
+          ? { kind: "icon", icon: trailingArrowIcon }
+          : null;
+      const arrowText = textArrow ? textArrow[1].trimEnd() : currentLabel;
+      const hoverArrowLabel = arrow
+        ? `${arrow.kind === "text" ? `${arrow.symbol} ` : ""}${arrowText}`
+        : null;
+      const hoverLabel = hoverArrowLabel || button.dataset.hoverText || button.getAttribute("data-hover-label") || "Click ME";
       const surface = classifyButton(button);
       const currentColor = getComputedStyle(button).color;
       activeButton = button;
@@ -136,8 +184,10 @@ export default function ButtonHoverEffects() {
         currentColor,
         surface,
         currentLabel,
-        hoverLabel
+        hoverLabel,
+        arrow ? { ...(arrow.kind === "icon" ? { icon: arrow.icon } : {}) } : null
       );
+      if (arrow) labels.classList.add("button-hover-label-preserve-style");
       const currentLetters = labels.querySelectorAll(".button-hover-current .button-hover-letter");
       const nextLetters = labels.querySelectorAll(".button-hover-next .button-hover-letter");
 
