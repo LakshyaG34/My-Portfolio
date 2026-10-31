@@ -128,7 +128,8 @@ const Nav = () => {
         variants={navVariants}
         animate={hidden ? "hidden" : "visible"}
         transition={{ duration: 0.35, ease: "easeInOut" }}
-        className="fixed top-0 left-0 w-full z-50 backdrop-blur-2xl bg-white/70 border-b border-violet-200/70 shadow-[0_8px_32px_rgba(91,65,160,0.08)]"
+        // className="rounded-full fixed top-4 left-0 w-full z-50 backdrop-blur-2xl bg-white/70 border-b border-violet-200/70 shadow-[0_8px_32px_rgba(91,65,160,0.08)]"
+        className="rounded-full fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-7xl z-50 backdrop-blur-2xl bg-white/70 border-b border-violet-200/70 shadow-[0_8px_32px_rgba(91,65,160,0.08)]"
       >
         <div className="flex justify-between items-center max-w-7xl mx-auto px-3 sm:px-6 py-3 sm:py-4 gap-2">
           {/* Logo */}
