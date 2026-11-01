@@ -5,13 +5,17 @@ import Hero2 from '../components/Home/Hero2'
 import Hero3 from '../components/Home/Hero3'
 import Hero4 from '../components/Home/Hero4'
 import Hero6 from '../components/Home/Hero6'
+import ScrollMorphJourney from '../components/Home/ScrollMorphJourney'
+import ScrollMorphShowcase from '../components/Home/ScrollMorphShowcase'
 
 const Home = () =>{
     return(
         <div className='pt-10 md:pt-18'>
             <Hero1/>
+            <ScrollMorphJourney />
             <Hero5/>
             <Hero6/>
+            <ScrollMorphShowcase />
             <Hero2/>
             <Hero7/>
             <Hero3/>
