@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const gallery = [
   "/images/Home1.jpg",
@@ -37,7 +37,7 @@ function GalleryCard({ src, index, progress }) {
   return (
     <motion.div
       style={{ left, top, rotate, scale }}
-      className="absolute z-10 h-[clamp(88px,15vh,150px)] w-[clamp(64px,9vw,112px)] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-[18px] bg-[#e9e3fb] shadow-[0_14px_30px_rgba(66,42,130,0.2)] ring-1 ring-white/70 sm:rounded-[22px]"
+      className="absolute z-10 h-[clamp(88px,15vh,150px)] w-[clamp(58px,6.5vw,100px)] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-[18px] bg-[#e9e3fb] shadow-[0_14px_30px_rgba(66,42,130,0.2)] ring-1 ring-white/70 sm:rounded-[22px]"
     >
       <img src={src} alt="" loading="lazy" className="h-full w-full object-cover" />
     </motion.div>
@@ -46,14 +46,10 @@ function GalleryCard({ src, index, progress }) {
 
 export default function ScrollMorphHero({ title = "The future is built on AI." }) {
   const sectionRef = useRef(null);
-  const { scrollYProgress } = useScroll({
+  const { scrollYProgress: progress } = useScroll({
     target: sectionRef,
-    offset: ["start start", "end start"],
-  });
-  const progress = useSpring(scrollYProgress, {
-    stiffness: 75,
-    damping: 24,
-    mass: 0.45,
+    // Complete the morph exactly as the sticky viewport is released.
+    offset: ["start start", "end end"],
   });
 
   const orbitHeadingOpacity = useTransform(progress, [0.28, 0.55], [1, 0]);
@@ -64,7 +60,7 @@ export default function ScrollMorphHero({ title = "The future is built on AI." }
 
   return (
     <section ref={sectionRef} className="relative bg-[#f8f7fc] text-[#28243a]">
-      <div className="relative h-[190vh]">
+      <div className="relative h-[250vh]">
         <div className="sticky top-0 h-[100svh] min-h-[620px] overflow-hidden">
           <div className="absolute inset-[10px] overflow-hidden rounded-[18px] border border-[#e6defb] bg-[#fcfbff] sm:inset-5 sm:rounded-[22px]">
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_46%,rgba(255,255,255,0)_24%,rgba(235,228,255,0.62)_100%),radial-gradient(ellipse_at_16%_18%,rgba(196,174,255,0.28),transparent_38%),radial-gradient(ellipse_at_88%_82%,rgba(213,199,255,0.3),transparent_36%)]" />
