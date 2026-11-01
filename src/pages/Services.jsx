@@ -6,7 +6,7 @@ import HeroS6 from "../components/Services/HeroS6";
 import HeroS7 from "../components/Services/HeroS7";
 import HeroS8 from "../components/Services/HeroS8";
 import HeroS1 from "../components/Services/HeroS1";
-import ScrollMorphHero from "../components/ui/scroll-morph-hero";
+import ScrollMorphHero from "../components/Services/scroll-morph-hero";
 
 const Services = () =>{
     return(

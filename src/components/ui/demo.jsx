@@ -1,4 +1,4 @@
-import ScrollMorphHero from "./scroll-morph-hero";
+import ScrollMorphHero from "../Services/scroll-morph-hero";
 
 export default function Demo() {
   return <ScrollMorphHero />;
