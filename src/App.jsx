@@ -5,7 +5,6 @@ import { lazy, Suspense } from "react";
 import PublicRoute from "./utils/PublicRoutes";
 import WebsiteLayout from "./Layout/WebsiteLayout";
 import Unauthorized from "./pages/Unauthorized";
-import Demo from "./pages/Demo";
 import ButtonHoverEffects from "./components/ButtonHoverEffects";
 
 
@@ -44,7 +43,6 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/careers" element={<Career />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/demo" element={<Demo />} />
         </Route>
 
         <Route path="/unauthorized" element={<Unauthorized />} />
