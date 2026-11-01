@@ -1,5 +1,5 @@
 import { motion, useMotionValue, useAnimationFrame } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const images = [
   "/images/Hero1.png",
@@ -28,15 +28,24 @@ const images = [
 
 const Hero6 = () => {
   const x = useMotionValue(0);
+  const firstSetRef = useRef(null);
+  const [setWidth, setSetWidth] = useState(0);
   const [paused, setPaused] = useState(false);
 
-  const duplicatedImages = [...images, ...images];
+  useEffect(() => {
+    const measureTrack = () => {
+      setSetWidth(firstSetRef.current?.getBoundingClientRect().width || 0);
+    };
 
-  // animation loop
+    measureTrack();
+    window.addEventListener("resize", measureTrack);
+    return () => window.removeEventListener("resize", measureTrack);
+  }, []);
+
   useAnimationFrame((t, delta) => {
-    if (!paused) {
-      x.set(x.get() - delta * 0.08);
-    }
+    if (paused || !setWidth) return;
+    const nextX = x.get() - delta * 0.06;
+    x.set(nextX <= -setWidth ? nextX + setWidth : nextX);
   });
 
   return (
@@ -63,36 +72,33 @@ const Hero6 = () => {
 
       {/* Slider */}
       <div className="relative mt-16">
-        <div className="absolute left-0 top-0 h-full w-24 md:w-40 bg-gradient-to-r from-black to-transparent z-10" />
-        <div className="absolute right-0 top-0 h-full w-24 md:w-40 bg-gradient-to-l from-black to-transparent z-10" />
+        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-16 bg-gradient-to-r from-[#f8f7fc] via-[#f8f7fc]/75 to-transparent sm:w-24 md:w-40" />
+        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-16 bg-gradient-to-l from-[#f8f7fc] via-[#f8f7fc]/75 to-transparent sm:w-24 md:w-40" />
 
-        <motion.div className="flex gap-6 w-max px-6" style={{ x }}>
-          {duplicatedImages.map((img, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ y: -8 }}
-              onHoverStart={() => setPaused(true)}
-              onHoverEnd={() => setPaused(false)}
-              className="
-                min-w-[260px]
-                sm:min-w-[300px]
-                md:min-w-[360px]
-                h-[160px]
-                sm:h-[200px]
-                md:h-[240px]
-                rounded-xl
-                overflow-hidden
-                bg-white/70 border border-violet-100 shadow-xl shadow-violet-950/5 backdrop-blur-xl
-                border border-white/10
-                shadow-lg
-              "
+        <motion.div className="flex w-max" style={{ x }}>
+          {[0, 1].map((setIndex) => (
+            <div
+              key={setIndex}
+              ref={setIndex === 0 ? firstSetRef : undefined}
+              aria-hidden={setIndex === 1}
+              className="flex w-max gap-6 px-6"
             >
-              <img
-                src={img}
-                alt="hero design"
-                className="w-full h-full object-cover"
-              />
-            </motion.div>
+              {images.map((img, index) => (
+                <motion.div
+                  key={`${setIndex}-${index}`}
+                  whileHover={{ y: -8 }}
+                  onHoverStart={() => setPaused(true)}
+                  onHoverEnd={() => setPaused(false)}
+                  className="h-[160px] min-w-[260px] overflow-hidden rounded-2xl border border-violet-100 bg-white/75 shadow-xl shadow-violet-950/10 backdrop-blur-xl sm:h-[200px] sm:min-w-[300px] md:h-[240px] md:min-w-[360px]"
+                >
+                  <img
+                    src={img}
+                    alt={setIndex === 0 ? "Design and product showcase" : ""}
+                    className="h-full w-full object-cover"
+                  />
+                </motion.div>
+              ))}
+            </div>
           ))}
         </motion.div>
       </div>

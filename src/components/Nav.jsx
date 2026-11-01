@@ -4,10 +4,101 @@ import {
   useMotionValueEvent,
   AnimatePresence,
 } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { FaUserCircle, FaBars, FaTimes } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
+import gsap from "gsap";
+
+const BrandLogo = ({ onClick, compact = false }) => {
+  const markRef = useRef(null);
+
+  useEffect(() => {
+    const context = gsap.context(() => {
+      gsap.fromTo(
+        ".brand-mark__stroke",
+        { strokeDashoffset: 100, opacity: 0.35 },
+        {
+          strokeDashoffset: 0,
+          opacity: 1,
+          duration: 1,
+          stagger: 0.12,
+          ease: "power2.out",
+        },
+      );
+    }, markRef);
+
+    return () => context.revert();
+  }, []);
+
+  return (
+    <motion.button
+      type="button"
+      onClick={onClick}
+      data-hover-effect="off"
+      whileHover={{ y: -1 }}
+      whileTap={{ scale: 0.97 }}
+      className={`group flex items-center text-left ${compact ? "gap-2.5" : "gap-2 sm:gap-3"}`}
+      aria-label="Lakshya Goyal home"
+    >
+      <motion.span
+        whileHover={{ rotate: -5, scale: 1.06 }}
+        transition={{ type: "spring", stiffness: 360, damping: 18 }}
+        className={`relative grid shrink-0 place-items-center overflow-hidden rounded-[13px] bg-gradient-to-br from-violet-500 via-violet-600 to-indigo-700 shadow-[0_7px_18px_rgba(105,72,190,0.28)] ${compact ? "h-9 w-9" : "h-9 w-9 sm:h-10 sm:w-10"}`}
+      >
+        <span className="absolute inset-[1px] rounded-[12px] border border-white/25" />
+        <span className="absolute -right-3 -top-3 h-8 w-8 rounded-full bg-white/20 blur-md transition-transform duration-500 group-hover:translate-x-1 group-hover:translate-y-1" />
+        <svg
+          ref={markRef}
+          viewBox="0 0 48 48"
+          fill="none"
+          aria-hidden="true"
+          className="relative h-[72%] w-[72%]"
+        >
+          <path
+            className="brand-mark__stroke"
+            pathLength="100"
+            strokeDasharray="100"
+            strokeDashoffset="100"
+            d="M13 11v26h15"
+            stroke="white"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            className="brand-mark__stroke"
+            pathLength="100"
+            strokeDasharray="100"
+            strokeDashoffset="100"
+            d="M36 17a12 12 0 1 0 0 14h-8v-7h8"
+            stroke="white"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <circle cx="36" cy="31" r="2" fill="#d8caff" />
+        </svg>
+        <motion.span
+          aria-hidden="true"
+          className="absolute -right-1 -top-1 h-2 w-2 rounded-full bg-violet-200 shadow-[0_0_8px_rgba(255,255,255,0.9)]"
+          animate={{ scale: [0.8, 1.15, 0.8], opacity: [0.7, 1, 0.7] }}
+          transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </motion.span>
+      <span className="flex flex-col leading-none">
+        <span className="whitespace-nowrap text-[15px] font-bold tracking-[-0.045em] text-slate-900 sm:text-[17px]">
+          Lakshya <span className="text-violet-700">Goyal</span>
+        </span>
+        {!compact && (
+          <span className="mt-1 hidden text-[8px] font-semibold tracking-[0.2em] text-slate-500 sm:block">
+            DIGITAL ENGINEER
+          </span>
+        )}
+      </span>
+    </motion.button>
+  );
+};
 
 const renderStaggeredLabel = (label) => (
   <span className="nav-hover-label" aria-hidden="true">
@@ -66,11 +157,11 @@ const Nav = () => {
   }, [mobileMenuOpen]);
 
   const navLinks = [
-    { name: "Services", path: "/services" },
-    { name: "Products", path: "/products" },
-    { name: "About", path: "/about" },
-    { name: "Careers", path: "/careers" },
-    { name: "Contact", path: "/contact" },
+    { name: "About Me", path: "/about" },
+    { name: "My Services", path: "/services" },
+    // { name: "Products", path: "/products" },
+    // { name: "Careers", path: "/careers" },
+    { name: "Contact Me", path: "/contact" },
   ];
 
   // Animation variants
@@ -133,23 +224,7 @@ const Nav = () => {
       >
         <div className="flex justify-between items-center max-w-7xl mx-auto px-3 sm:px-6 py-3 sm:py-4 gap-2">
           {/* Logo */}
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="flex items-center gap-2 cursor-pointer shrink-0"
-            onClick={() => navigate("/")}
-          >
-            <img
-              src="/images/mylogo-4.png"
-              width={36}
-              height={36}
-              className="w-8 h-8 sm:w-10 sm:h-10"
-              alt="LG logo"
-            />
-            <span className="font-semibold text-base sm:text-lg tracking-tight text-slate-900">
-              Lakshya Goyal
-            </span>
-          </motion.div>
+          <BrandLogo onClick={() => navigate("/")} />
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-3 sm:gap-8 text-xs sm:text-sm">
@@ -228,18 +303,7 @@ const Nav = () => {
             >
               {/* Menu Header */}
               <div className="flex justify-between items-center p-6 border-b border-violet-100">
-                <div className="flex items-center gap-2">
-                  <img
-                    src="/images/logo.png"
-                    width={32}
-                    height={32}
-                    className="w-8 h-8"
-                    alt="LG logo"
-                  />
-                  <span className="font-semibold text-slate-900 text-lg">
-                    Lakshya Goyal
-                  </span>
-                </div>
+                <BrandLogo compact onClick={() => navigate("/")} />
                 <motion.button
                   whileHover={{ scale: 1.1, rotate: 90 }}
                   whileTap={{ scale: 0.9 }}
@@ -290,11 +354,11 @@ const Nav = () => {
               </div>
 
               {/* Footer */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-violet-100">
+              {/* <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-violet-100">
                 <p className="text-slate-500 text-xs text-center">
                   © 2026 FunctionX. All rights reserved.
                 </p>
-              </div>
+              </div> */}
             </motion.div>
           </>
         )}
