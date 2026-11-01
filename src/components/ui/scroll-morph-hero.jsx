@@ -37,7 +37,7 @@ function GalleryCard({ src, index, progress }) {
   return (
     <motion.div
       style={{ left, top, rotate, scale }}
-      className="absolute z-10 h-[clamp(88px,15vh,150px)] w-[clamp(64px,9vw,112px)] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-[18px] bg-[#e7e8e6] shadow-[0_14px_28px_rgba(20,27,41,0.16)] sm:rounded-[22px]"
+      className="absolute z-10 h-[clamp(88px,15vh,150px)] w-[clamp(64px,9vw,112px)] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-[18px] bg-[#e9e3fb] shadow-[0_14px_30px_rgba(66,42,130,0.2)] ring-1 ring-white/70 sm:rounded-[22px]"
     >
       <img src={src} alt="" loading="lazy" className="h-full w-full object-cover" />
     </motion.div>
@@ -63,11 +63,11 @@ export default function ScrollMorphHero({ title = "The future is built on AI." }
   const scrollHintOpacity = useTransform(progress, [0.05, 0.28], [1, 0]);
 
   return (
-    <section ref={sectionRef} className="relative bg-[#f8f8f7] text-[#151b29]">
+    <section ref={sectionRef} className="relative bg-[#f8f7fc] text-[#28243a]">
       <div className="relative h-[190vh]">
         <div className="sticky top-0 h-[100svh] min-h-[620px] overflow-hidden">
-          <div className="absolute inset-[10px] overflow-hidden rounded-[18px] border border-[#e6e6e3] bg-[#fbfbfa] sm:inset-5 sm:rounded-[22px]">
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(255,255,255,0)_28%,rgba(238,239,237,0.6)_100%)]" />
+          <div className="absolute inset-[10px] overflow-hidden rounded-[18px] border border-[#e6defb] bg-[#fcfbff] sm:inset-5 sm:rounded-[22px]">
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_46%,rgba(255,255,255,0)_24%,rgba(235,228,255,0.62)_100%),radial-gradient(ellipse_at_16%_18%,rgba(196,174,255,0.28),transparent_38%),radial-gradient(ellipse_at_88%_82%,rgba(213,199,255,0.3),transparent_36%)]" />
 
             <motion.div
               style={{ y: orbitHeadingY, opacity: orbitHeadingOpacity }}
@@ -78,7 +78,7 @@ export default function ScrollMorphHero({ title = "The future is built on AI." }
               </h2>
               <motion.p
                 style={{ opacity: scrollHintOpacity }}
-                className="mt-6 text-xs font-semibold tracking-[0.24em] text-[#aeb3bc] sm:mt-8 sm:text-base"
+                className="mt-6 text-xs font-semibold tracking-[0.24em] text-[#9589b5] sm:mt-8 sm:text-base"
               >
                 SCROLL TO EXPLORE
               </motion.p>
@@ -88,10 +88,10 @@ export default function ScrollMorphHero({ title = "The future is built on AI." }
               style={{ y: visionHeadingY, opacity: visionHeadingOpacity }}
               className="absolute inset-x-5 top-[13%] z-20 mx-auto max-w-4xl text-center sm:top-[13%]"
             >
-              <h2 className="text-4xl font-bold tracking-[-0.055em] sm:text-6xl md:text-8xl">
+              <h2 className="text-4xl font-bold tracking-[-0.055em] text-[#30274a] sm:text-6xl md:text-8xl">
                 Explore Our Vision
               </h2>
-              <p className="mx-auto mt-5 max-w-3xl text-base leading-7 text-[#586171] sm:mt-7 sm:text-xl sm:leading-8 md:text-2xl">
+              <p className="mx-auto mt-5 max-w-3xl text-base leading-7 text-[#665d7d] sm:mt-7 sm:text-xl sm:leading-8 md:text-2xl">
                 Discover a world where technology meets creativity. Scroll through our curated collection of innovations designed to shape the future.
               </p>
             </motion.div>
